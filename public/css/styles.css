@@ -967,7 +967,7 @@ img {
 .contact-link {
   color: var(--title-color); /* Default link color */
   text-decoration: none; /* Removes the underline from the link */
-  transition: color 0.3s; /* Smooth transition for color change */
+  transition: color 0.2s; /* Smooth transition for color change */
 }
 
 a:hover {
