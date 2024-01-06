@@ -338,7 +338,6 @@ img {
 .home-img .img-box {
   max-width: 250px; /* Set maximum width */
   border-radius: 50%; /* Circular border */
-  border: 6px solid white; /* Border styling */
   margin: auto; /* Center the box */
   overflow: hidden; /* Hide overflow to maintain circular shape */
   display: flex; /* Use flex to center the image inside */
