@@ -29,7 +29,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 window.addEventListener("load", () => {
   // Update Profile Image
-  updateProfileImage();
+  updateHomeImage();
   // Update About Image
   updateAboutImage();
 
