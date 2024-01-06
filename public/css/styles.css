@@ -1435,4 +1435,24 @@ img {
   }
 }
 
+
+/*----------------
+Thank You Page
+------------------*/
+.thanks{
+  background-color: var(--body-color);
+} 
+
+
+.sub-text{
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use full viewport height to center vertically */
+  text-align: center;
+  color: var(--title-color);
+}
+
+
 /*# sourceMappingURL=styles.css.map */
