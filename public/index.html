@@ -89,7 +89,7 @@
                     </div>
                     <div class="home-img">
                         <div class="img-box">
-                            <img src="img/large/home/home-pic.jpg" alt="profile-img">
+                            <img src="img/large/home/home-pic2.jpg" alt="profile-img">
                         </div>
                         <svg class="home-blob hidden" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -149,7 +149,7 @@
 
             <div class="about-container container grid">
                 <div class="about-container-img">
-                    <img src="img/large/about/about-pic.jpg" alt="About" class="about-container-imgAlt">
+                    <img src="img/large/about/about-pic2.jpg" alt="About" class="about-container-imgAlt">
                 </div>
 
                 <div class="about-container-data">
@@ -789,7 +789,7 @@
                     <div class="services-content">
                         <div>
                             <i class="fas fa-tools services-icon"></i>
-                            <h3 class="services-title">Software/Hardware<br>Testing</h3>
+                            <h3 class="services-title">Quality<br>Assurance</h3>
                         </div>
 
                         <span class="button button-flex button-small button-link services-button">
@@ -1023,26 +1023,25 @@
                     </div>
                 </div>
 
-                <form method="POST" action="https://formsubmit.co/7f0a0d290963060dc1ae551a63ff3e88"
-                    class="contact-form grid">
+                <form method="POST" action="https://formsubmit.co/7f0a0d290963060dc1ae551a63ff3e88" class="contact-form grid">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
-                            <label for="" class="contact-label">Name</label>
-                            <input name="Fullname" type="text" class="contact-input">
+                            <label for="fullname" class="contact-label">Name</label>
+                            <input id="fullname" name="Fullname" type="text" autocomplete="name" class="contact-input">
                         </div>
                         <div class="contact-content">
-                            <label for="" class="contact-label">Email</label>
-                            <input name="email" type="email" class="contact-input">
+                            <label for="email" class="contact-label">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" class="contact-input">
                         </div>
                     </div>
                     <div class="grid">
                         <div class="contact-content">
-                            <label for="" class="contact-label">Subject</label>
-                            <input name="Subject" type="text" class="contact-input">
+                            <label for="subject" class="contact-label">Subject</label>
+                            <input id="subject" name="Subject" type="text" class="contact-input">
                         </div>
                         <div class="contact-content">
-                            <label for="" class="contact-label">Message</label>
-                            <textarea name="Message" style="resize: none;" rows="5" class="contact-input"></textarea>
+                            <label for="message" class="contact-label">Message</label>
+                            <textarea id="message" name="Message" style="resize: none;" rows="5" class="contact-input"></textarea>
                         </div>
                     </div>
                     <input type="hidden" name="_next" value="https://minh-vuong.de/thanks.html">
@@ -1050,10 +1049,10 @@
                     <input type="hidden" name="_autoresponse" value="your custom message">
                     <input type="hidden" name="_template" value="table">
                     <div class="contact-button">
-                        <button type="submit" class="button button-flex"> Send Message <i
-                                class="fab fa-telegram-plane button-icon"></i></button>
+                        <button type="submit" class="button button-flex"> Send Message <i class="fab fa-telegram-plane button-icon"></i></button>
                     </div>
                 </form>
+                
             </div>
         </section>
     </main>
