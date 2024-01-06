@@ -44,9 +44,9 @@ function updateAboutImage() {
   var imgElement = document.querySelector('.about-container .about-container-img img');
   
   if (screenWidth <= 575) {
-      imgElement.src = 'img/small/about/about-pic-min2.jpg'; // Small image for small screens
+      imgElement.src = 'img/small/about/about-pic-min2.webp'; // Small image for small screens
   } else {
-      imgElement.src = 'img/large/about/about-pic2.jpg'; // Large image for large screens
+      imgElement.src = 'img/large/about/about-pic2.webp'; // Large image for large screens
   }
 }
 
