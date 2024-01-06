@@ -963,6 +963,21 @@ img {
   outline: none;
   padding: .25rem .5rem .5rem 0;
 }
+
+.contact-link {
+  color: var(--title-color); /* Default link color */
+  text-decoration: none; /* Removes the underline from the link */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:hover {
+  color: var(--first-color);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
 /* ------------------------------------- FOOTER -------------------------------------------------*/
 .footer {
   padding-top: 2rem;
