@@ -257,7 +257,7 @@ img {
   color: var(--first-color-alt);
 }
 
-/* HOME */
+/* ------------------------------------- HOME -------------------------------------------------*/
 .home-container {
   gap: 1rem;
 }
@@ -335,7 +335,26 @@ img {
   font-size: 1.25rem;
 }
 
-/* BUTTONS */
+.home-img .img-box {
+  max-width: 250px; /* Set maximum width */
+  border-radius: 50%; /* Circular border */
+  border: 6px solid white; /* Border styling */
+  margin: auto; /* Center the box */
+  overflow: hidden; /* Hide overflow to maintain circular shape */
+  display: flex; /* Use flex to center the image inside */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.home-img .img-box img {
+  max-width: 100%; /* Maximum width of the image is 100% of container */
+  max-height: 100%; /* Maximum height of the image is 100% of container */
+  border-radius: 50%; /* Circular shape for the image */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+
+
+/* ------------------------------------- BUTTONS -------------------------------------------------*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -445,7 +464,7 @@ img {
   justify-content: center;
 }
 
-/* SKILLS */
+/* ------------------------------------- SKILLS -------------------------------------------------*/
 .skills-container {
   row-gap: 0;
 }
@@ -586,7 +605,7 @@ img {
   width: 40%;
 }
 
-/* QUALIFICATION */
+/* ------------------------------------- QUALIFICATION -------------------------------------------------*/
 .qualification-tabs {
   display: flex;
   justify-content: space-evenly;
@@ -673,7 +692,7 @@ img {
   transform: translate(6px, -7px);
 }
 
-/* SERVICES */
+/* ------------------------------------- SERVICES -------------------------------------------------*/
 .services-container {
   display: grid;
   gap: 1.5rem;
@@ -771,7 +790,7 @@ img {
   margin-right: var(--mb-0-5);
 }
 
-/* PORTFOLIO */
+/* ------------------------------------- PORTFOLIO -------------------------------------------------*/
 .portfolio-container {
   overflow: initial;
 }
@@ -831,7 +850,7 @@ img {
   outline: none;
 }
 
-/* PROJECT IN MIND */
+/* ------------------------------------- PROJECTS IN MIND -------------------------------------------------*/
 .project {
   text-align: center;
 }
@@ -860,7 +879,7 @@ img {
   justify-self: center;
 }
 
-/* TESTIMONIAL */
+/* ------------------------------------- TESTIMONAL -------------------------------------------------*/
 .testimonial-data,
 .testimonial-header {
   display: flex;
@@ -896,7 +915,7 @@ img {
   color: var(--first-color);
 }
 
-/* CONTACT ME */
+/* ------------------------------------- CONTACT ME -------------------------------------------------*/
 .contact-container {
   row-gap: 3rem;
 }
@@ -945,8 +964,7 @@ img {
   outline: none;
   padding: .25rem .5rem .5rem 0;
 }
-
-/* FOOTER */
+/* ------------------------------------- FOOTER -------------------------------------------------*/
 .footer {
   padding-top: 2rem;
 }
@@ -1002,7 +1020,7 @@ img {
   color: #fff;
 }
 
-/* SCROLL UP */
+/* ------------------------------------- SCROLL UP -------------------------------------------------*/
 .scrollup {
   position: fixed;
   right: 2.5rem;
@@ -1024,7 +1042,7 @@ img {
   background-color: var(--first-color-alt);
 }
 
-/* Show scroll */
+/* ------------------------------------- SHOW SCROLL -------------------------------------------------*/
 .show-scroll {
   bottom: 3.5rem;
   right: 2.5rem;
@@ -1046,7 +1064,7 @@ img {
   background-color: var(--text-color-light);
 }
 
-/* MEDIA QUERIES */
+/* ------------------------------------- MEDIA QUERIES -------------------------------------------------*/
 /* For small devices */
 @media screen and (max-width: 350px) {
   .container {
@@ -1436,9 +1454,7 @@ img {
 }
 
 
-/*----------------
-Thank You Page
-------------------*/
+/* ------------------------------------- THANK YOU PAGE -------------------------------------------------*/
 .thanks{
   background-color: var(--body-color);
 } 
