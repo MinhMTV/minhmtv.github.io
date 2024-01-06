@@ -36,6 +36,7 @@ function toggleSkills() {
   let itemClass = this.parentNode.className;
 
   for (i = 0; i < skillsContent.length; i++) {
+    console.log("lenght" + skillsContent.length)
     skillsContent[i].className = "skills-container-content skills-close";
   }
   if (itemClass === "skills-container-content skills-close") {
