@@ -27,40 +27,40 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 
-window.addEventListener("load", () => {
-  // Update Profile Image
-  updateHomeImage();
-  // Update About Image
-  updateAboutImage();
+// window.addEventListener("load", () => {
+//   // Update Profile Image
+//   updateHomeImage();
+//   // Update About Image
+//   updateAboutImage();
 
-});
-// Add event listener for window resize
-window.addEventListener("resize", updateHomeImage);
-window.addEventListener("resize",updateAboutImage);
+// });
+// // Add event listener for window resize
+// window.addEventListener("resize", updateHomeImage);
+// window.addEventListener("resize",updateAboutImage);
 
-// Function to update about image based on screen width
-function updateAboutImage() {
-  var screenWidth = window.innerWidth;
-  var imgElement = document.querySelector('.about-container .about-container-img img');
+// // Function to update about image based on screen width
+// function updateAboutImage() {
+//   var screenWidth = window.innerWidth;
+//   var imgElement = document.querySelector('.about-container .about-container-img img');
   
-  if (screenWidth <= 575) {
-      imgElement.src = 'img/small/about/about-pic-min2.webp'; // Small image for small screens
-  } else {
-      imgElement.src = 'img/large/about/about-pic2.webp'; // Large image for large screens
-  }
-}
+//   if (screenWidth <= 575) {
+//       imgElement.src = 'img/small/about/about-pic-min2.webp'; // Small image for small screens
+//   } else {
+//       imgElement.src = 'img/large/about/about-pic2.webp'; // Large image for large screens
+//   }
+// }
 
-// Function to update profile image based on screen width
-function updateHomeImage() {
-  var screenWidth = window.innerWidth;
-  var imgElement = document.querySelector('.home-img .img-box img');
+// // Function to update profile image based on screen width
+// function updateHomeImage() {
+//   var screenWidth = window.innerWidth;
+//   var imgElement = document.querySelector('.home-img .img-box img');
   
-  if (screenWidth <= 575) {
-      imgElement.src = 'img/small/home/home-pic-min2.webp'; // Small image for small screens
-  } else {
-      imgElement.src = 'img/large/home/home-pic2.webp'; // Large image for large screens
-  }
-}
+//   if (screenWidth <= 575) {
+//       imgElement.src = 'img/small/home/home-pic-min2.webp'; // Small image for small screens
+//   } else {
+//       imgElement.src = 'img/large/home/home-pic2.webp'; // Large image for large screens
+//   }
+// }
 
 
 
