@@ -423,8 +423,6 @@ img {
   max-height: 100%; /* Maximum height of the image is 100% of container */
   width: 350px;
   height: 450px;
-  border-radius: 50%; /* Circular shape for the image */
-  object-fit: cover; /* Cover the container without distorting the image */
 }
 
 
