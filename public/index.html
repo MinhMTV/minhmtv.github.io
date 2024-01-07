@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -21,54 +21,57 @@
     <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav-logo">Minh Tuan Vuong</a>
+            <a href="#" class="nav-logo" data-i18n="nav_logo">Minh Tuan Vuong</a>
 
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list grid">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active-link">
-                            <i class="fas fa-home nav-link-icon"></i> Home
-                        </a>
+                        <a href="#home" class="nav-link active-link" data-i18n="nav_home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">
-                            <i class="fas fa-user nav-link-icon"></i> About
-                        </a>
+                        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link">
-                            <i class="fas fa-file-alt nav-link-icon"></i> Skills
-                        </a>
+                        <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#services" class="nav-link">
-                            <i class="fas fa-briefcase nav-link-icon"></i> Services
-                        </a>
+                        <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
                     </li>
                     <li class="nav-item hidden">
-                        <a href="#portfolio" class="nav-link">
-                            <i class="fas fa-image nav-link-icon"></i> Portfolio
-                        </a>
+                        <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">
-                            <i class="fas fa-envelope nav-link-icon"></i> Contact
-                        </a>
+                        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
                     </li>
                 </ul>
                 <i class="fas fa-times nav-close" id="nav-close"></i>
             </div>
             <div class="nav-btns">
+                <div class="grid-container">
+                    <!-- Theme change button -->
+                    <i class="fas fa-moon change-theme" id="theme-button" data-i18n="theme_button"></i>
 
-                <!-- Theme change button -->
-                <i class="fas fa-moon change-theme" id="theme-button"></i>
-
-                <div class="nav-toggle" id="nav-toggle">
-                    <i class="fas fa-qrcode"></i>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <i class="fas fa-qrcode" data-i18n="nav_toggle"></i>
+                    </div>
+                    <!-- Language change button -->
+                    <div class="lang-menu">
+                        <div class="selected-lang">
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" class="de" data-i18n="lang_german">German</a>
+                            </li>
+                            <li>
+                                <a href="" class="en" data-i18n="lang_english">English</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <!-- MAIN -->
     <main class="main">
@@ -93,19 +96,21 @@
                         </div>
                     </div>
                     <div class="home-data">
-                        <h1 class="home-data-title">Hi, I'm Minh Tuan!</h1>
-                        <h3 class="home-data-subtitle"><span id="auto-type"></span></h3>
-                        <p class="home-data-description">I am a developer, focusing on app-development and automation. 
+                        <h1 class="home-data-title" data-i18n="home_title">Hi, I'm Minh Tuan!</h1>
+                        <h3 class="home-data-subtitle"> <span id="auto-type" data-i18n="home_subtitle"></span>
+                        </h3>
+                        <p class="home-data-description" data-i18n="home_description">
+                            I am a developer, focusing on app-development and automation.
                             Based in Germany and currently living in Vienna to study.
                         </p>
-                        <a href="#contact" class="button button-flex">
+                        <a href="#contact" class="button button-flex" data-i18n="home_contact">
                             Contact Me <i class="fab fa-telegram-plane button-icon"></i>
                         </a>
                     </div>
                 </div>
                 <div class="home-scroll">
                     <a href="#about" class="home-scroll-button button-flex">
-                        <span class="home-scroll-button-name">Scroll down</span>
+                        <span class="home-scroll-button-name" data-i18n="home_scroll">Scroll down</span>
                         <i class="fas fa-arrow-down home-scroll-button-arrow"></i>
                     </a>
                 </div>
@@ -124,16 +129,17 @@
 
         <!-- ABOUT -->
         <section class="about section" id="about">
-            <h2 class="section-title">About Me</h2>
-            <span class="section-subtitle">My introduction</span>
+            <h2 class="section-title" data-i18n="about_title">About Me</h2>
+            <span class="section-subtitle" data-i18n="about_subtitle">My introduction</span>
 
             <div class="about-container container grid">
                 <div class="about-container-img">
-                    <img src="img/about-pic.webp" alt="About" class="about-container-imgAlt" >
+                    <img src="img/about-pic.webp" alt="About" class="about-container-imgAlt">
                 </div>
 
                 <div class="about-container-data">
-                    <p class="about-container-data-description">As a Medical Informatics student I am able to
+                    <p class="about-container-data-description" data-i18n="about_description">
+                        As a Medical Informatics student I am able to
                         adapt freely to diverse situations
                         and changing demands. I love programming and learning new abilities.
                         Fun fact: I visited over 40 countries already and i am not stopping.
@@ -142,261 +148,261 @@
                     <div class="about-container-data-info">
                         <div>
                             <span class="about-container-data-info-title">6+</span>
-                            <span class="about-container-data-name">Years <br> experience</span>
+                            <span class="about-container-data-name" data-i18n="about_years_experience">Years <br>
+                                experience</span>
                         </div>
                         <div>
                             <span class="about-container-data-info-title">10+</span>
-                            <span class="about-container-data-name">Completed <br> projects</span>
+                            <span class="about-container-data-name" data-i18n="about_completed_projects">Completed <br>
+                                projects</span>
                         </div>
                         <div>
                             <span class="about-container-data-info-title">8+</span>
-                            <span class="about-container-data-name">Companies <br> worked</span>
+                            <span class="about-container-data-name" data-i18n="about_companies_worked">Companies <br>
+                                worked</span>
                         </div>
                     </div>
                     <div class="about-buttons">
-                        <a download="" href="pdf/Minh_Tuan Vuong_Resume.pdf" class="button button-flex">
+                        <a download="" href="pdf/Minh_Tuan Vuong_Resume.pdf" class="button button-flex"
+                            data-i18n="about_download_cv">
                             Download CV <i class="fas fa-download button-icon"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- SKILLS -->
         <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-            <span class="section-subtitle">My technical level</span>
+            <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+            <span class="section-subtitle" data-i18n="skills_subtitle">My technical level</span>
 
             <div class="skills-container container grid">
-                <!-- Top Row -->
-                <div>
-                    <!-- SKILLS 1 -->
-                    <div class="skills-container-content skills-open">
-
-                        <div class="skills-container-header">
-                            <i class="fas fa-code skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">App programming</h1>
-                                <span class="skills-subtitle">More than 6 years</span>
-                            </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
+                <!-- SKILLS 1: App Programming -->
+                <div class="skills-container-content skills-open">
+                    <div class="skills-container-header">
+                        <i class="fas fa-code skills-icon"></i>
+                        <div>
+                            <h1 class="skills-title" data-i18n="skills_app_programming_title">App programming</h1>
+                            <span class="skills-subtitle" data-i18n="skills_app_programming_years">More than 6
+                                years</span>
                         </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Kotlin</h3>
-                                    <span class="skills-number">80%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-kotlin"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Java</h3>
-                                    <span class="skills-number">70%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-java"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Xamarin</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-xamarin"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Swift</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-swift"></span>
-                                </div>
-                            </div>
-                        </div>
+                        <i class="fas fa-angle-down skills-arrow"></i>
                     </div>
-                    <!-- SKILLS 2 -->
-                    <div class="skills-container-content skills-close">
 
-                        <div class="skills-container-header">
-                            <i class="fas fa-swatchbook skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Database programming</h1>
-                                <span class="skills-subtitle">More than 4 years</span>
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Kotlin</h3>
+                                <span class="skills-number">80%</span>
                             </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-kotlin"></span>
+                            </div>
                         </div>
 
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">SQL</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-sql"></span>
-                                </div>
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Java</h3>
+                                <span class="skills-number">70%</span>
                             </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">MySQL</h3>
-                                    <span class="skills-number">50%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-mysql"></span>
-                                </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-java"></span>
                             </div>
+                        </div>
 
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Postgres</h3>
-                                    <span class="skills-number">30%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-postgres"></span>
-                                </div>
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Xamarin</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-xamarin"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Swift</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-swift"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <!-- SKILLS 3 -->
-                    <div class="skills-container-content skills-close">
 
-                        <div class="skills-container-header">
-                            <i class="fas fa-server skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Software automation</h1>
-                                <span class="skills-subtitle">More than 4 years</span>
-                            </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
+                <!-- SKILLS 2: Database Programming -->
+                <div class="skills-container-content skills-close">
+                    <div class="skills-container-header">
+                        <i class="fas fa-swatchbook skills-icon"></i>
+                        <div>
+                            <h1 class="skills-title" data-i18n="skills_database_programming_title">Database programming
+                            </h1>
+                            <span class="skills-subtitle" data-i18n="skills_database_programming_years">More than 4
+                                years</span>
                         </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Python</h3>
-                                    <span class="skills-number">80%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-python"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Selenium</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-selenium"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Ranorex</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-ranorex"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Jenkins</h3>
-                                    <span class="skills-number">40%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-jenkins"></span>
-                                </div>
-                            </div>
-                        </div>
+                        <i class="fas fa-angle-down skills-arrow"></i>
                     </div>
-                    <!-- SKILLS 4 -->
-                    <div class="skills-container-content skills-close">
 
-                        <div class="skills-container-header">
-                            <i class="fas fa-laptop skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Other</h1>
-                                <!-- <span class="skills-subtitle">More than 10 years</span> -->
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">SQL</h3>
+                                <span class="skills-number">60%</span>
                             </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-sql"></span>
+                            </div>
                         </div>
 
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">HTML,CSS</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-html"></span>
-                                </div>
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">MySQL</h3>
+                                <span class="skills-number">50%</span>
                             </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Javascript</h3>
-                                    <span class="skills-number">40%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-js"></span>
-                                </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-mysql"></span>
                             </div>
+                        </div>
 
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Wordpress</h3>
-                                    <span class="skills-number">40%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-wordpress"></span>
-                                </div>
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Postgres</h3>
+                                <span class="skills-number">30%</span>
                             </div>
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">C,C++</h3>
-                                    <span class="skills-number">40%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-c"></span>
-                                </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-postgres"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- SKILLS 3: Software Automation -->
+                <div class="skills-container-content skills-close">
+                    <div class="skills-container-header">
+                        <i class="fas fa-server skills-icon"></i>
+                        <div>
+                            <h1 class="skills-title" data-i18n="skills_software_automation_title">Software automation
+                            </h1>
+                            <span class="skills-subtitle" data-i18n="skills_software_automation_years">More than 4
+                                years</span>
+                        </div>
+                        <i class="fas fa-angle-down skills-arrow"></i>
+                    </div>
+
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Python</h3>
+                                <span class="skills-number">80%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-python"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Selenium</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-selenium"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Ranorex</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-ranorex"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Jenkins</h3>
+                                <span class="skills-number">40%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-jenkins"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SKILLS 4: Other Skills -->
+                <div class="skills-container-content skills-close">
+                    <div class="skills-container-header">
+                        <i class="fas fa-laptop skills-icon"></i>
+                        <div>
+                            <h1 class="skills-title" data-i18n="skills_other_title">Other</h1>
+                            <!-- Commented out subtitle does not need data-i18n -->
+                        </div>
+                        <i class="fas fa-angle-down skills-arrow"></i>
+                    </div>
+
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">HTML,CSS</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-html"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Javascript</h3>
+                                <span class="skills-number">40%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-js"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">Wordpress</h3>
+                                <span class="skills-number">40%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-wordpress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-titles">
+                                <h3 class="skills-name">C,C++</h3>
+                                <span class="skills-number">40%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-c"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         </section>
 
         <!-- QUALIFICATION -->
         <section class="qualification section">
-            <h2 class="section-title">Qualification</h2>
-            <span class="section-subtitle">My personal journey</span>
+            <h2 class="section-title" data-i18n="qualification_title">Qualification</h2>
+            <span class="section-subtitle" data-i18n="qualification_subtitle">My personal journey</span>
 
             <div class="qualification-container container">
                 <div class="qualification-tabs">
-                    <div class="qualification-tabs-button button-flex qualification-active" data-target="#education">
+                    <div class="qualification-tabs-button button-flex qualification-active" data-target="#education"
+                        data-i18n="qualification_education_tab">
                         <i class="fas fa-graduation-cap qualification-icon"></i>
                         Education
                     </div>
-                    <div class="qualification-tabs-button button-flex" data-target="#work">
+                    <div class="qualification-tabs-button button-flex" data-target="#work"
+                        data-i18n="qualification_work_tab">
                         <i class="fas fa-briefcase qualification-icon"></i>
                         Work
                     </div>
@@ -406,7 +412,7 @@
                     <div class="qualification-content qualification-active" data-content id="education">
                         <!-- QUALIFICATION 1 -->
                         <div class="qualification-data">
-                            <!-- LEFT COLUMN-->
+                            <!-- Left Column Empty -->
                             <div></div>
 
                             <div>
@@ -414,8 +420,10 @@
                                 <span class="qualification-line"></span>
                             </div>
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Extended Study of Innovation</h3>
-                                <span class="qualification-edu-subtitle">Technical University Vienna</span>
+                                <h3 class="qualification-title" data-i18n="qualification_study_innovation">Extended
+                                    Study of Innovation</h3>
+                                <span class="qualification-edu-subtitle" data-i18n="qualification_uni_vienna">Technical
+                                    University Vienna</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2023 - 2024
@@ -424,10 +432,12 @@
                         </div>
                         <!-- QUALIFICATION 2 -->
                         <div class="qualification-data">
-                            <!-- LEFT COLUMN-->
+                            <!-- Left Column -->
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Medical Informatics MSc</h3>
-                                <span class="qualification-edu-subtitle">Technical University Vienna</span>
+                                <h3 class="qualification-title" data-i18n="qualification_medical_informatics">Medical
+                                    Informatics MSc</h3>
+                                <span class="qualification-edu-subtitle" data-i18n="qualification_uni_vienna">Technical
+                                    University Vienna</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2022 - 2024
@@ -440,7 +450,7 @@
                         </div>
                         <!-- QUALIFICATION 3 -->
                         <div class="qualification-data">
-                            <!-- RIGHT COLUMN-->
+                            <!-- Right Column Empty -->
                             <div></div>
 
                             <div>
@@ -449,24 +459,29 @@
                             </div>
 
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Medical Engineering BSc</h3>
-                                <span class="qualification-edu-subtitle">University Duisburg-Essen </span>
+                                <h3 class="qualification-title" data-i18n="qualification_medical_engineering">Medical
+                                    Engineering BSc</h3>
+                                <span class="qualification-edu-subtitle"
+                                    data-i18n="qualification_uni_duisburg_essen">University Duisburg-Essen</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2016 - 2022
                                 </div>
                             </div>
                         </div>
-                        <!-- QUALIFICATION 3 -->
+                        <!-- QUALIFICATION 4 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Android Basic Development</h3>
-                                <span class="qualification-edu-subtitle">Udacity - Google</span>
+                                <h3 class="qualification-title" data-i18n="qualification_android_development">Android
+                                    Basic Development</h3>
+                                <span class="qualification-edu-subtitle"
+                                    data-i18n="qualification_udacity_google">Udacity - Google</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2017 - 2019
                                 </div>
                             </div>
+
                             <!-- LEFT COLUMN-->
                             <div>
                                 <span class="qualification-rounder"></span>
@@ -475,14 +490,14 @@
                         </div>
                     </div>
 
-                    <!-- QUALIFICATION CONTENT 2 -->
+                    <!-- QUALIFICATION CONTENT 2: Work Experience -->
                     <div class="qualification-content" data-content id="work">
                         <!-- QUALIFICATION 1 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Tutor App Development</h3>
-                                <span class="qualification-subtitle">Syntax Institut</span>
-                                <span class="qualification-subtitle2">Berlin, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_tutor_app_dev">Tutor App Development</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_syntax_institut">Syntax Institut</span>
+                                <span class="qualification-subtitle2" data-i18n="qualification_location_berlin">Berlin, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2022 - present
@@ -503,9 +518,11 @@
                             </div>
 
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Freelance Tester</h3>
-                                <span class="qualification-subtitle">Test.IO</span>
-                                <span class="qualification-subtitle2">Oberhausen, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_freelance_tester">Freelance
+                                    Tester</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_test_io">Test.IO</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_location_oberhausen">Oberhausen, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2018 - 2020
@@ -515,9 +532,11 @@
                         <!-- QUALIFICATION 3 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Freelance Technician</h3>
-                                <span class="qualification-subtitle">Mila AG</span>
-                                <span class="qualification-subtitle2">Oberhausen, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_freelance_technician">Freelance
+                                    Technician</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_mila_ag">Mila AG</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_location_oberhausen">Oberhausen, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2017 - 2019
@@ -538,9 +557,12 @@
                             </div>
 
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">IT Consultant</h3>
-                                <span class="qualification-subtitle">EY IT Advisory Services</span>
-                                <span class="qualification-subtitle2">Linz, Austria</span>
+                                <h3 class="qualification-title" data-i18n="qualification_it_consultant">IT Consultant
+                                </h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_ey_advisory">EY IT
+                                    Advisory Services</span>
+                                <span class="qualification-subtitle2" data-i18n="qualification_location_linz">Linz,
+                                    Austria</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2020 - 2021
@@ -550,9 +572,12 @@
                         <!-- QUALIFICATION 5 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Working Student Test Management</h3>
-                                <span class="qualification-subtitle">Aldi GmbH</span>
-                                <span class="qualification-subtitle2">Essen, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_student_test_mgmt">Working
+                                    Student Test Management</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_aldi_gmbh">Aldi
+                                    GmbH</span>
+                                <span class="qualification-subtitle2" data-i18n="qualification_location_essen">Mülheim,
+                                    Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2020 - 2020
@@ -573,21 +598,28 @@
                             </div>
 
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Acoustic Engineer</h3>
-                                <span class="qualification-subtitle">GE Healthcare</span>
-                                <span class="qualification-subtitle2">Zipf, Austria</span>
+                                <h3 class="qualification-title" data-i18n="qualification_acoustic_engineer">Acoustic
+                                    Engineer</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_ge_healthcare">GE
+                                    Healthcare</span>
+                                <span class="qualification-subtitle2" data-i18n="qualification_location_zipf">Zipf,
+                                    Austria</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2019 - 2019
                                 </div>
                             </div>
                         </div>
+
                         <!-- QUALIFICATION 7 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">IT Consultant</h3>
-                                <span class="qualification-subtitle">Act e.V</span>
-                                <span class="qualification-subtitle2">Essen, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_title_it_consultant_act">IT
+                                    Consultant</h3>
+                                <span class="qualification-subtitle" data-i18n="qualification_subtitle_act_ev">Act
+                                    e.V</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_subtitle2_essen_germany">Essen, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2017 - 2019
@@ -598,31 +630,37 @@
                                 <span class="qualification-line"></span>
                             </div>
                         </div>
+
                         <!-- QUALIFICATION 8 -->
                         <div class="qualification-data">
                             <div></div>
-
                             <div>
                                 <span class="qualification-rounder"></span>
                                 <span class="qualification-line"></span>
                             </div>
-
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Student Assistent</h3>
-                                <span class="qualification-subtitle">Edelhelfer GmbH</span>
-                                <span class="qualification-subtitle2">Mannheim, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_title_student_assistant">
+                                    Student Assistent</h3>
+                                <span class="qualification-subtitle"
+                                    data-i18n="qualification_subtitle_edelhelfer_gmbh">Edelhelfer GmbH</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_subtitle2_mannheim_germany">Mannheim, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2018 - 2019
                                 </div>
                             </div>
                         </div>
+
                         <!-- QUALIFICATION 9 -->
                         <div class="qualification-data">
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Android Developer</h3>
-                                <span class="qualification-subtitle">InterMedCon GmbH</span>
-                                <span class="qualification-subtitle2">Munster, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_title_android_developer">
+                                    Android Developer</h3>
+                                <span class="qualification-subtitle"
+                                    data-i18n="qualification_subtitle_intermedcon_gmbh">InterMedCon GmbH</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_subtitle2_munster_germany">Munster, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2018 - 2019
@@ -633,25 +671,27 @@
                                 <span class="qualification-line"></span>
                             </div>
                         </div>
+
                         <!-- QUALIFICATION 10 -->
                         <div class="qualification-data">
                             <div></div>
-
                             <div>
                                 <span class="qualification-rounder"></span>
                                 <span class="qualification-line"></span>
                             </div>
-
                             <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Lecturer</h3>
-                                <span class="qualification-subtitle">Bildungsinstitut Ruhrschule</span>
-                                <span class="qualification-subtitle2">Essen, Germany</span>
+                                <h3 class="qualification-title" data-i18n="qualification_title_lecturer">Lecturer</h3>
+                                <span class="qualification-subtitle"
+                                    data-i18n="qualification_subtitle_ruhrschule">Bildungsinstitut Ruhrschule</span>
+                                <span class="qualification-subtitle2"
+                                    data-i18n="qualification_subtitle2_essen_germany">Essen, Germany</span>
                                 <div class="qualification-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2018 - 2019
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -659,41 +699,43 @@
 
         <!-- SERVICES -->
         <section class="services section" id="services">
-            <h2 class="section-title">Services</h2>
-            <span class="section-subtitle">What I offer</span>
+            <h2 class="section-title" data-i18n="services_title">Services</h2>
+            <span class="section-subtitle" data-i18n="services_subtitle">What I offer</span>
 
             <div class="services-container container grid">
                 <!-- SERVICES 1: App Development -->
                 <div class="services-content">
                     <div>
                         <i class="fas fa-mobile-alt services-icon"></i>
-                        <h3 class="services-title">App<br>Development</h3>
+                        <h3 class="services-title" data-i18n="services_app_dev_title">App<br>Development</h3>
                     </div>
 
-                    <span class="button button-flex button-small button-link services-button">
+                    <span class="button button-flex button-small button-link services-button"
+                        data-i18n="services_view_more">
                         View More
                         <i class="fas fa-arrow-right button-icon"></i>
                     </span>
 
                     <div class="services-modal">
                         <div class="services-modal-content">
-                            <h4 class="services-modal-title">App Development</h4>
+                            <h4 class="services-modal-title" data-i18n="services_app_dev_modal_title">App Development
+                            </h4>
                             <i class="fas fa-times services-modal-close"></i>
 
                             <div class="services-modal-services grid">
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_app_dev_mobile">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Development of mobile applications in Java, Kotlin, Xamarin, and Swift.</p>
                                 </li>
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_app_dev_ui">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Building user-friendly interfaces for enhanced user experience.</p>
                                 </li>
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_app_dev_backend">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Integration of back-end services and databases for robust app functionality.</p>
                                 </li>
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_app_dev_publication">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Preparation and support for app publication on various platforms.</p>
                                 </li>
@@ -705,25 +747,28 @@
                 <div class="services-content">
                     <div>
                         <i class="fas fa-robot services-icon"></i>
-                        <h3 class="services-title">Software<br>Automation</h3>
+                        <h3 class="services-title" data-i18n="services_software_automation_title">Software<br>Automation
+                        </h3>
                     </div>
 
-                    <span class="button button-flex button-small button-link services-button">
+                    <span class="button button-flex button-small button-link services-button"
+                        data-i18n="services_view_more">
                         View More
                         <i class="fas fa-arrow-right button-icon"></i>
                     </span>
 
                     <div class="services-modal">
                         <div class="services-modal-content">
-                            <h4 class="services-modal-title">Software Automation</h4>
+                            <h4 class="services-modal-title" data-i18n="services_software_automation_modal_title">
+                                Software Automation</h4>
                             <i class="fas fa-times services-modal-close"></i>
 
                             <div class="services-modal-services grid">
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_automation_python">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Expertise in Python for developing automation scripts and tools.</p>
                                 </li>
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_automation_tools">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Proficient in automation tools like Selenium, Ranorex, and Jenkins for
                                         streamlined workflows.</p>
@@ -732,29 +777,33 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- SERVICES 3: Database Programming -->
                 <div class="services-content">
                     <div>
                         <i class="fas fa-database services-icon"></i>
-                        <h3 class="services-title">Database<br>Programming</h3>
+                        <h3 class="services-title" data-i18n="services_database_programming_title">
+                            Database<br>Programming</h3>
                     </div>
 
-                    <span class="button button-flex button-small button-link services-button">
+                    <span class="button button-flex button-small button-link services-button"
+                        data-i18n="services_view_more">
                         View More
                         <i class="fas fa-arrow-right button-icon"></i>
                     </span>
 
                     <div class="services-modal">
                         <div class="services-modal-content">
-                            <h4 class="services-modal-title">Database Programming</h4>
+                            <h4 class="services-modal-title" data-i18n="services_database_programming_modal_title">
+                                Database Programming</h4>
                             <i class="fas fa-times services-modal-close"></i>
 
                             <div class="services-modal-services grid">
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_database_sql">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Development and management of SQL, MySQL, and PostgreSQL databases.</p>
                                 </li>
-                                <li class="services-modal-service">
+                                <li class="services-modal-service" data-i18n="services_database_custom_solutions">
                                     <i class="far fa-check-circle services-modal-icon"></i>
                                     <p>Custom database solutions for efficient data handling and storage.</p>
                                 </li>
@@ -763,49 +812,51 @@
                     </div>
                 </div>
 
-                    <!-- SERVICES 4: Software/Hardware Testing -->
-                    <div class="services-content">
-                        <div>
-                            <i class="fas fa-tools services-icon"></i>
-                            <h3 class="services-title">Quality<br>Assurance</h3>
-                        </div>
+                <!-- SERVICES 4: Software/Hardware Testing -->
+                <div class="services-content">
+                    <div>
+                        <i class="fas fa-tools services-icon"></i>
+                        <h3 class="services-title" data-i18n="services_quality_assurance_title">Quality<br>Assurance
+                        </h3>
+                    </div>
 
-                        <span class="button button-flex button-small button-link services-button">
-                            View More
-                            <i class="fas fa-arrow-right button-icon"></i>
-                        </span>
+                    <span class="button button-flex button-small button-link services-button"
+                        data-i18n="services_view_more">
+                        View More
+                        <i class="fas fa-arrow-right button-icon"></i>
+                    </span>
 
-                        <div class="services-modal">
-                            <div class="services-modal-content">
-                                <h4 class="services-modal-title">Software/Hardware Testing</h4>
-                                <i class="fas fa-times services-modal-close"></i>
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-title" data-i18n="services_quality_assurance_modal_title">
+                                Software/Hardware Testing</h4>
+                            <i class="fas fa-times services-modal-close"></i>
 
-                                <div class="services-modal-services grid">
-                                    <li class="services-modal-service">
-                                        <i class="far fa-check-circle services-modal-icon"></i>
-                                        <p>Expert testing of software applications for functionality, performance, and
-                                            security.</p>
-                                    </L>
-                                    <li class="services-modal-service">
-                                        <i class="far fa-check-circle services-modal-icon"></i>
-                                        <p>Rigorous hardware testing to ensure durability and performance under various
-                                            conditions.</p>
-                                    </li>
-                                    <li class="services-modal-service">
-                                        <i class="far fa-check-circle services-modal-icon"></i>
-                                        <p>Quality assurance to meet industry standards for both software and hardware
-                                            products.</p>
-                                    </li>
-                                    <li class="services-modal-service">
-                                        <i class="far fa-check-circle services-modal-icon"></i>
-                                        <p>Utilization of the latest testing tools and methodologies for comprehensive
-                                            analysis.</p>
-                                    </li>
-                                </div>
+                            <div class="services-modal-services grid">
+                                <li class="services-modal-service" data-i18n="services_testing_software_applications">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Expert testing of software applications for functionality, performance, and
+                                        security.</p>
+                                </li>
+                                <li class="services-modal-service" data-i18n="services_testing_hardware_durability">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Rigorous hardware testing to ensure durability and performance under various
+                                        conditions.</p>
+                                </li>
+                                <li class="services-modal-service" data-i18n="services_testing_quality_assurance">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Quality assurance to meet industry standards for both software and hardware
+                                        products.</p>
+                                </li>
+                                <li class="services-modal-service" data-i18n="services_testing_latest_tools">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Utilization of the latest testing tools and methodologies for comprehensive
+                                        analysis.</p>
+                                </li>
                             </div>
                         </div>
                     </div>
-            </div>
+                </div>
         </section>
 
 
@@ -968,72 +1019,69 @@
 
         <!-- CONTACT ME -->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Contact Me</h2>
-            <span class="section-subtitle">Get in touch</span>
+            <h2 class="section-title" data-i18n="contact_title">Contact Me</h2>
+            <span class="section-subtitle" data-i18n="contact_subtitle">Get in touch</span>
 
             <div class="contact-container container grid">
                 <div class="contact-items">
                     <div class="contact-information">
                         <i class="fas fa-phone contact-icon"></i>
-
                         <div>
-                            <h3 class="contact-title">Call Me</h3>
-                            <span class="contact-subtitle"><a class="contact-link" href="tel:+4915168809435">+49 1516
-                                    8809435</a></span>
+                            <h3 class="contact-title" data-i18n="contact_call_me">Call Me</h3>
+                            <span class="contact-subtitle"><a class="contact-link" href="tel:+4915168809435"
+                                    data-i18n="contact_phone_number">+49 1516 8809435</a></span>
                         </div>
                     </div>
                     <div class="contact-information">
                         <i class="far fa-envelope contact-icon"></i>
-
                         <div>
-                            <h3 class="contact-title">Email</h3>
-                            <span class="contact-subtitle"><a class="contact-link"
-                                    href="mailto:business@minhtv.de">business@minhtv.de</a></span>
+                            <h3 class="contact-title" data-i18n="contact_email">Email</h3>
+                            <span class="contact-subtitle"><a class="contact-link" href="mailto:business@minhtv.de"
+                                    data-i18n="contact_email_address">business@minhtv.de</a></span>
                         </div>
                     </div>
                     <div class="contact-information">
                         <i class="fas fa-map-marker-alt contact-icon"></i>
-
                         <div>
-                            <h3 class="contact-title">Location</h3>
-                            <span class="contact-subtitle">Vienna</span>
+                            <h3 class="contact-title" data-i18n="contact_location">Location</h3>
+                            <span class="contact-subtitle" data-i18n="contact_location_city">Vienna</span>
                         </div>
                     </div>
                 </div>
 
-                <form method="POST" action="https://formsubmit.co/7f0a0d290963060dc1ae551a63ff3e88" class="contact-form grid">
+                <form method="POST" action="https://formsubmit.co/7f0a0d290963060dc1ae551a63ff3e88"
+                    class="contact-form grid">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
-                            <label for="fullname" class="contact-label">Name</label>
+                            <label for="fullname" class="contact-label" data-i18n="contact_label_name">Name</label>
                             <input id="fullname" name="Fullname" type="text" autocomplete="name" class="contact-input">
                         </div>
                         <div class="contact-content">
-                            <label for="email" class="contact-label">Email</label>
+                            <label for="email" class="contact-label" data-i18n="contact_label_email">Email</label>
                             <input id="email" name="email" type="email" autocomplete="email" class="contact-input">
                         </div>
                     </div>
                     <div class="grid">
                         <div class="contact-content">
-                            <label for="subject" class="contact-label">Subject</label>
+                            <label for="subject" class="contact-label" data-i18n="contact_label_subject">Subject</label>
                             <input id="subject" name="Subject" type="text" class="contact-input">
                         </div>
                         <div class="contact-content">
-                            <label for="message" class="contact-label">Message</label>
-                            <textarea id="message" name="Message" style="resize: none;" rows="5" class="contact-input"></textarea>
+                            <label for="message" class="contact-label" data-i18n="contact_label_message">Message</label>
+                            <textarea id="message" name="Message" style="resize: none;" rows="5"
+                                class="contact-input"></textarea>
                         </div>
                     </div>
-                    <input type="hidden" name="_next" value="https://minh-tuan-vuong.de/thanks.html">
-                    <input type="hidden" name="_replyto" value="email">
-                    <input type="hidden" name="_autoresponse" value="your custom message">
-                    <input type="hidden" name="_template" value="table">
+                    <!-- Hidden inputs and submit button -->
                     <div class="contact-button">
-                        <button type="submit" class="button button-flex"> Send Message <i class="fab fa-telegram-plane button-icon"></i></button>
+                        <button type="submit" class="button button-flex" data-i18n="contact_button_send">Send Message<i
+                                class="fab fa-telegram-plane button-icon"></i></button>
                     </div>
                 </form>
-                
             </div>
         </section>
     </main>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1041,36 +1089,36 @@
             <div class="footer-container container grid">
                 <div class="footer-texts">
                     <h1 class="footer-title">Minh Tuan Vuong</h1>
-                    <span class="footer-subtitle">Full-Stack Engineer</span>
+                    <span class="footer-subtitle" data-i18n="footer_subtitle">Full-Stack Engineer</span>
                 </div>
 
                 <ul class="footer-links">
                     <li>
-                        <a href="#services" class="footer-link">Services</a>
+                        <a href="#services" class="footer-link" data-i18n="footer_link_services">Services</a>
                     </li>
                     <li>
-                        <a href="#portfolio" class="footer-link">Portfolio</a>
+                        <a href="#portfolio" class="footer-link" data-i18n="footer_link_portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="footer-link">Contact Me</a>
+                        <a href="#contact" class="footer-link" data-i18n="footer_link_contact">Contact Me</a>
                     </li>
                 </ul>
                 <div class="footer-socials">
                     <a href="https://www.linkedin.com/in/minhtv/" target="_blank" class="home-social-icon">
-                        <i class="fab fa-linkedin-in footer-social""></i>
-                        </a>
-                        <a href=" https://www.xing.com/profile/MinhTuan_Vuong/" target="_blank"
-                            class="home-social-icon">
-                            <i class="fab fa-xing footer-social""></i>
-                        </a>
-                        <a href=" https://github.com/MinhMTV" target="_blank" class="home-social-icon">
-                                <i class="fab fa-github footer-social""></i>
-                        </a>
+                        <i class="fab fa-linkedin-in footer-social"></i>
+                    </a>
+                    <a href="https://www.xing.com/profile/MinhTuan_Vuong/" target="_blank" class="home-social-icon">
+                        <i class="fab fa-xing footer-social"></i>
+                    </a>
+                    <a href="https://github.com/MinhMTV" target="_blank" class="home-social-icon">
+                        <i class="fab fa-github footer-social"></i>
+                    </a>
                 </div>
             </div>
-            <p class=" footer-copy">&#169; Minh Tuan Vuong. All right reserved</p>
-                </div>
+            <p class="footer-copy" >&#169; Minh Tuan Vuong. All right reserved</p>
+        </div>
     </footer>
+
 
     <!-- SCROLL TOP -->
     <a href="#" class="scrollup" id="scroll-up">

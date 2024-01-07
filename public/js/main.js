@@ -27,6 +27,54 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 
+/* CHANGE LANGUAGE */
+function updateContent(langData) {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      element.textContent = langData[key];
+  });
+}
+
+function updateLanguageFlag(lang) {
+  const flagElement = document.querySelector('.lang-menu .selected-lang');
+  if (lang === 'de') {
+      flagElement.style.backgroundImage = "url('https://img.icons8.com/color/48/germany.png')";
+      console.log("lang");
+  } else if (lang === 'en') {
+      flagElement.style.backgroundImage = "url('https://img.icons8.com/color/48/great-britain.png')";
+  }
+}
+
+
+// Function to set the language preference and update the content
+async function setLanguagePreference(lang) {
+  localStorage.setItem('language', lang);
+  const langData = await fetchLanguageData(lang);
+  updateContent(langData);
+  updateLanguageFlag(lang);
+}
+
+// Function to fetch language data
+async function fetchLanguageData(lang) {
+  const response = await fetch(`lang/${lang}.json`);
+  return response.json();
+}
+
+// Event listeners for language change
+document.querySelector('.de').addEventListener('click', () => setLanguagePreference('de'));
+document.querySelector('.en').addEventListener('click', () => setLanguagePreference('en'));
+
+// Load the preferred language on page load
+document.addEventListener('DOMContentLoaded', async () => {
+  const preferredLang = localStorage.getItem('language') || 'en'; // default to English
+  setLanguagePreference(preferredLang);
+});
+
+
+
+
+
+
 
 /* ACCORDION SKILLS */
 const skillsContent = document.getElementsByClassName(
