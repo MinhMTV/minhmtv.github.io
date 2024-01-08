@@ -47,6 +47,18 @@ function updateLanguageFlag(lang) {
   }
 }
 
+// Detect browser language
+function getBrowserLanguage() {
+  const lang = navigator.language || navigator.userLanguage; 
+  return lang.split('-')[0]; // Extract language code
+}
+
+// Set initial language
+function setInitialLanguage() {
+  const browserLang = getBrowserLanguage();
+  const savedLang = localStorage.getItem('language') || browserLang; // Use saved language if available, else use browser language
+  setLanguagePreference(savedLang);
+}
 
 // Function to set the language preference and update the content
 async function setLanguagePreference(lang) {
@@ -248,4 +260,9 @@ themeButton.addEventListener("click", () => {
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+// Load the preferred language on page load
+document.addEventListener('DOMContentLoaded', async () => {
+  setInitialLanguage(); // Call the new function to set initial language
 });
