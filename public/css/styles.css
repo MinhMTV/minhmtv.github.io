@@ -1281,7 +1281,7 @@ a:hover {
 
   .header .nav .nav-btns .lang-menu ul {
     position: absolute;
-    transform: translateY(-100%);
+    transform: translate(20px, -110px);
     right: 0 ;
   } 
 }
