@@ -172,17 +172,6 @@ background-repeat: no-repeat;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* hide content */
 .hidden {
   display: none !important;
@@ -308,8 +297,14 @@ img {
   color: var(--first-color);
 }
 
+.header .nav-menu {
+  z-index: 0;
+}
+
+
 .header .nav-menu.show-menu {
   bottom: 0;
+  z-index: 1;
 }
 
 .header .nav-logo,
@@ -1283,7 +1278,14 @@ a:hover {
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
   }
+
+  .header .nav .nav-btns .lang-menu ul {
+    position: absolute;
+    transform: translateY(-100%);
+    right: 0 ;
+  } 
 }
+
 
 /* For medium devices */
 @media screen and (min-width: 568px) {

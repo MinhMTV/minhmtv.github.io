@@ -7,13 +7,16 @@ const navMenu = document.getElementById("nav-menu"),
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+    document.querySelector('.lang-menu').style.zIndex = "-1";
   });
+
 }
 
 /* MENU HIDDEN */
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    document.querySelector('.lang-menu').style.zIndex = "100";
   });
 }
 
@@ -39,7 +42,6 @@ function updateLanguageFlag(lang) {
   const flagElement = document.querySelector('.lang-menu .selected-lang');
   if (lang === 'de') {
       flagElement.style.backgroundImage = "url('https://img.icons8.com/color/48/germany.png')";
-      console.log("lang");
   } else if (lang === 'en') {
       flagElement.style.backgroundImage = "url('https://img.icons8.com/color/48/great-britain.png')";
   }
