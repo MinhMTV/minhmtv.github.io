@@ -10,13 +10,14 @@
     "lang_english": "English",
 
     "home_title": "Hi, I'm Minh Tuan!",
+    "typedStrings": ["Medical Engineer", "App Developer", "Full-Stack Engineer"],
     "home_description": "I am a developer, focusing on app-development and automation. Based in Germany and currently living in Vienna to study.",
     "home_contact": "Contact Me",
     "home_scroll": "Scroll down",
 
     "about_title": "About Me",
     "about_subtitle": "My introduction",
-    "about_description": "As a Medical Informatics student I am able to adapt freely to diverse situations and changing demands. I love programming and learning new abilities. Fun fact: I visited over 40 countries already and I am not stopping.",
+    "about_description": "Currently, I am studying Medical Informatics at TU Wien. I love programming and have gained some experience in various companies. In my free time, I enjoy singing and making music, but most of all I like to travel and discover cultures.",
     "about_years_experience": "Years \n experience",
     "about_completed_projects": "Completed \n Projects",
     "about_companies_worked": "Companies \n worked",
@@ -101,9 +102,7 @@
     "services_quality_assurance_modal_title": "Software/Hardware Testing",
 
     "services_testing_software_applications": "Expert testing of software applications for functionality, performance, and security.",
-    "services_testing_hardware_durability": "Rigorous hardware testing to ensure durability and performance under various conditions.",
     "services_testing_quality_assurance": "Quality assurance to meet industry standards for both software and hardware products.",
-    "services_testing_latest_tools": "Utilization of the latest testing tools and methodologies for comprehensive analysis.",
 
     "contact_title": "Contact Me",
     "contact_subtitle": "Get in touch",

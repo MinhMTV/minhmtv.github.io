@@ -2,28 +2,29 @@
     "nav_logo": "Minh Tuan Vuong",
     "nav_home": "Startseite",
     "nav_about": "Über mich",
-    "nav_skills": "Fähigkeiten",
-    "nav_services": "Dienstleistungen",
+    "nav_skills": "Skills",
+    "nav_services": "Service",
     "nav_portfolio": "Portfolio",
     "nav_contact": "Kontakt",
     "lang_german": "Deutsch",
     "lang_english": "Englisch",
 
     "home_title": "Hallo, ich bin Minh Tuan!",
-    "home_description": "Ich bin Entwickler, spezialisiert auf App-Entwicklung und Automatisierung. Derzeit lebe und studiere ich in Wien, Deutschland.",
+    "typedStrings": ["Medizintechniker", "App-Entwickler", "Full-Stack-Entwickler"],
+    "home_description": "Ich bin Entwickler, spezialisiert auf App-Entwicklung und Automatisierung. Geboren in Deutschland und momentan Studium in Wien",
     "home_contact": "Kontaktiere mich",
     "home_scroll": "Nach unten scrollen",
 
     "about_title": "Über mich",
-    "about_subtitle": "Meine Vorstellung",
-    "about_description": "Als Student der Medizininformatik kann ich mich flexibel an unterschiedliche Situationen und wechselnde Anforderungen anpassen. Ich liebe das Programmieren und das Erlernen neuer Fähigkeiten. Interessantes Faktum: Ich habe bereits über 40 Länder besucht und ich habe noch nicht vor, aufzuhören.",
+    "about_subtitle": "Wer bin ich",
+    "about_description": "Derzeit studiere ich Medizininformatik an der TU Wien. Ich liebe das Programmieren und konnte schon einiges an Erfahrung in verschiedenen Firmen sammeln. In meiner Freizeit singe und musiziere ich gerne, aber am liebsten gehe Reisen und Kulturen entdecken.",
     "about_years_experience": "Jahre \n Erfahrung",
     "about_completed_projects": "Abgeschlossene \n Projekte",
     "about_companies_worked": "Firmen \n gearbeitet",
     "about_download_cv": "Lebenslauf herunterladen",
 
-    "skills_title": "Fähigkeiten",
-    "skills_subtitle": "Mein technisches Niveau",
+    "skills_title": "Skills",
+    "skills_subtitle": "Was ich kann",
     "skills_app_programming_title": "App-Programmierung",
     "skills_app_programming_years": "Mehr als 6 Jahre",
 
@@ -40,7 +41,7 @@
     "qualification_education_tab": "Bildung",
     "qualification_work_tab": "Arbeit",
 
-    "qualification_study_innovation": "Erweitertes Studium der Innovation",
+    "qualification_study_innovation": "Erweiterungsstudium Innovation",
     "qualification_uni_vienna": "Technische Universität Wien",
     "qualification_medical_informatics": "Medizininformatik MSc",
     "qualification_medical_engineering": "Medizintechnik BSc",
@@ -100,13 +101,11 @@
     "services_quality_assurance_modal_title": "Software-/Hardware-Tests",
 
     "services_testing_software_applications": "Fachmännische Tests von Softwareanwendungen hinsichtlich Funktionalität, Leistung und Sicherheit.",
-    "services_testing_hardware_durability": "Gründliche Hardwaretests, um Langlebigkeit und Leistung unter verschiedenen Bedingungen zu gewährleisten.",
     "services_testing_quality_assurance": "Qualitätssicherung, um Industriestandards für Software- und Hardwareprodukte zu erfüllen.",
-    "services_testing_latest_tools": "Einsatz der neuesten Testwerkzeuge und Methoden für umfassende Analysen.",
 
-    "contact_title": "Kontaktieren Sie Mich",
-    "contact_subtitle": "In Verbindung treten",
-    "contact_call_me": "Rufen Sie Mich An",
+    "contact_title": "Kontakt",
+    "contact_subtitle": "Erreiche mich hiermit",
+    "contact_call_me": "Meine Nummer",
     "contact_email": "E-Mail",
     "contact_email_address": "business@minhtv.de",
     "contact_location": "Standort",
@@ -118,7 +117,7 @@
     "contact_button_send": "Nachricht Senden",
 
     "footer_subtitle": "Full-Stack-Entwickler",
-    "footer_link_services": "Dienstleistungen",
+    "footer_link_services": "Services",
     "footer_link_portfolio": "Portfolio",
-    "footer_link_contact": "Kontaktieren Sie Mich"
+    "footer_link_contact": "Kontakt"
 }

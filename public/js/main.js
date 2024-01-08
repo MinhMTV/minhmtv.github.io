@@ -36,6 +36,7 @@ function updateContent(langData) {
       const key = element.getAttribute('data-i18n');
       element.textContent = langData[key];
   });
+  updateTypedStrings(langData['typedStrings']);
 }
 
 function updateLanguageFlag(lang) {
@@ -45,6 +46,19 @@ function updateLanguageFlag(lang) {
   } else if (lang === 'en') {
       flagElement.style.backgroundImage = "url('https://img.icons8.com/color/48/great-britain.png')";
   }
+}
+
+// Function to update Typed.js strings
+function updateTypedStrings(strings) {
+  if (window.typed) {
+    window.typed.destroy(); // Destroy existing Typed instance
+  }
+  window.typed = new Typed('#auto-type', {
+    strings: strings,
+    typeSpeed: 100,
+    backspeed: 200,
+    loop: true
+  });
 }
 
 // Detect browser language
@@ -80,7 +94,7 @@ document.querySelector('.en').addEventListener('click', () => setLanguagePrefere
 
 // Load the preferred language on page load
 document.addEventListener('DOMContentLoaded', async () => {
-  const preferredLang = localStorage.getItem('language') || 'en'; // default to English
+  const preferredLang = localStorage.getItem('language') || 'de'; // default to German
   setLanguagePreference(preferredLang);
 });
 
