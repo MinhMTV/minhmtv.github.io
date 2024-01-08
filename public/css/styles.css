@@ -475,6 +475,7 @@ img {
 .button-icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
+  margin-right: var(--mb-0-5);
   transition: 0.3s;
 }
 
@@ -1052,7 +1053,7 @@ img {
 
 .contact-container .contact-information .contact-subtitle {
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--title-color);
 }
 
 .contact-container .contact-content {
