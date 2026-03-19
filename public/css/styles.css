@@ -589,6 +589,13 @@ img {
   cursor: pointer;
 }
 
+.skills-container-header > div {
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .skills-container-header .skills-title {
   font-size: var(--h3-font-size);
 }
@@ -658,66 +665,6 @@ img {
   background-color: var(--first-color);
 }
 
-.skills-container .skills-kotlin {
-  width: 80%;
-}
-
-.skills-container .skills-java {
-  width: 70%;
-}
-
-.skills-container .skills-xamarin {
-  width: 60%;
-}
-
-.skills-container .skills-swift {
-  width: 60%;
-}
-
-.skills-container .skills-python {
-  width: 80%;
-}
-
-.skills-container .skills-selenium {
-  width: 60%;
-}
-
-.skills-container .skills-ranorex {
-  width: 60%;
-}
-
-.skills-container .skills-jenkins {
-  width: 40%;
-}
-
-.skills-container .skills-sql {
-  width: 60%;
-}
-
-.skills-container .skills-mysql {
-  width: 50%;
-}
-
-.skills-container .skills-postgres {
-  width: 30%;
-}
-
-.skills-container .skills-html {
-  width: 60%;
-}
-
-.skills-container .skills-js {
-  width: 40%;
-}
-
-.skills-container .skills-wordpress {
-  width: 40%;
-}
-
-.skills-container .skills-c {
-  width: 40%;
-}
-
 /* ------------------------------------- QUALIFICATION -------------------------------------------------*/
 .qualification-tabs {
   display: flex;
@@ -754,16 +701,47 @@ img {
 
 .qualification-data {
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
+  grid-template-columns: minmax(0, 1.2fr) max-content minmax(0, 1.2fr);
+  column-gap: 1.75rem;
 }
 
 .qualification-data-alt {
   text-align: center;
 }
 
+.qualification-card {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 .qualification-data .qualification-title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-right: 1.25rem;
+  margin-bottom: .2rem;
+  cursor: pointer;
+}
+
+#work .qualification-data .qualification-title::after {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: .75rem;
+  color: var(--text-color-light);
+  position: absolute;
+  top: .2rem;
+  right: .1rem;
+  transition: .2s;
+}
+
+#work .qualification-data .qualification-title:hover::after {
+  color: var(--first-color);
+  transform: translateX(2px);
 }
 
 .qualification-data .qualification-edu-subtitle{
@@ -789,6 +767,10 @@ img {
   color: var(--text-color-light);
 }
 
+.qualification-data .qualification-more {
+  display: none;
+}
+
 .qualification-data .qualification-rounder {
   display: inline-block;
   width: 13px;
@@ -805,6 +787,93 @@ img {
   transform: translate(6px, -7px);
 }
 
+.qualification-container {
+  max-width: 900px;
+}
+
+#work.qualification-content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.qualification-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  padding: 1rem;
+  transition: .3s;
+}
+
+.qualification-modal.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.qualification-modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  width: min(100%, 680px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.qualification-modal-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.qualification-modal-subtitle,
+.qualification-modal-location,
+.qualification-modal-calendar {
+  display: block;
+  font-size: var(--small-font-size);
+}
+
+.qualification-modal-subtitle {
+  font-weight: var(--font-medium);
+}
+
+.qualification-modal-location,
+.qualification-modal-calendar {
+  color: var(--text-color-light);
+  margin-top: .2rem;
+}
+
+.qualification-modal-description {
+  margin-top: var(--mb-1-5);
+}
+
+.qualification-modal-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.qualification-modal-list li {
+  margin-bottom: .65rem;
+  line-height: 1.65;
+}
+
+.qualification-modal-list li:last-child {
+  margin-bottom: 0;
+}
+
+.qualification-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
 /* ------------------------------------- SERVICES -------------------------------------------------*/
 .services-container {
   display: grid;
@@ -814,11 +883,17 @@ img {
 
 .services-container .services-content {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: var(--container-color);
   padding: 3.5rem .5rem 1.25rem 1.5rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
+}
+
+.services-container .services-content > div:first-child {
+  min-height: 7.5rem;
 }
 
 .services-container .services-content:hover {
@@ -841,6 +916,8 @@ img {
 .services-container .services-content .services-button {
   cursor: pointer;
   font-size: var(--small-font-size);
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .services-container .services-content .services-button:hover .button-icon {

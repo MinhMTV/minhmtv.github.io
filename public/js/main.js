@@ -32,11 +32,28 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /* CHANGE LANGUAGE */
 function updateContent(langData) {
+  window.currentLangData = langData;
   document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       element.textContent = langData[key];
   });
   updateTypedStrings(langData['typedStrings']);
+}
+
+function syncSkillBars() {
+  document.querySelectorAll(".skills-data").forEach((skillItem) => {
+    const numberElement = skillItem.querySelector(".skills-number");
+    const barElement = skillItem.querySelector(".skills-percentage");
+
+    if (!numberElement || !barElement) {
+      return;
+    }
+
+    const percentage = parseInt(numberElement.textContent, 10);
+    if (!Number.isNaN(percentage)) {
+      barElement.style.width = `${percentage}%`;
+    }
+  });
 }
 
 function updateLanguageFlag(lang) {
@@ -79,6 +96,7 @@ async function setLanguagePreference(lang) {
   localStorage.setItem('language', lang);
   const langData = await fetchLanguageData(lang);
   updateContent(langData);
+  syncSkillBars();
   updateLanguageFlag(lang);
 }
 
@@ -167,6 +185,86 @@ modalCloses.forEach((modalClose) => {
       modalView.classList.remove("active-modal");
     });
   });
+});
+
+const qualificationModal = document.getElementById("qualification-modal");
+const qualificationModalClose = document.getElementById("qualification-modal-close");
+const qualificationModalTitle = document.getElementById("qualification-modal-title");
+const qualificationModalSubtitle = document.getElementById("qualification-modal-subtitle");
+const qualificationModalLocation = document.getElementById("qualification-modal-location");
+const qualificationModalCalendar = document.getElementById("qualification-modal-calendar");
+const qualificationModalDescription = document.getElementById("qualification-modal-description");
+
+function openQualificationModal(card) {
+  if (!qualificationModal) {
+    return;
+  }
+
+  const langData = window.currentLangData || {};
+  const detailKey = card.dataset.detailKey;
+  const detailText = langData[detailKey] || "";
+
+  qualificationModalTitle.textContent =
+    card.querySelector(".qualification-title")?.textContent.trim() || "";
+  qualificationModalSubtitle.textContent =
+    card.querySelector(".qualification-subtitle")?.textContent.trim() || "";
+  qualificationModalLocation.textContent =
+    card.querySelector(".qualification-subtitle2")?.textContent.trim() || "";
+  qualificationModalCalendar.textContent =
+    card.querySelector(".qualification-calendar")?.textContent.trim() || "";
+
+  qualificationModalDescription.innerHTML = "";
+  const items = detailText.split("\n").map((entry) => entry.trim()).filter(Boolean);
+
+  if (items.length > 0) {
+    const list = document.createElement("ul");
+    list.className = "qualification-modal-list";
+
+    items.forEach((entry) => {
+      const li = document.createElement("li");
+      li.textContent = entry;
+      list.appendChild(li);
+    });
+
+    qualificationModalDescription.appendChild(list);
+  }
+
+  qualificationModal.classList.add("active-modal");
+  qualificationModal.setAttribute("aria-hidden", "false");
+}
+
+function closeQualificationModal() {
+  if (!qualificationModal) {
+    return;
+  }
+
+  qualificationModal.classList.remove("active-modal");
+  qualificationModal.setAttribute("aria-hidden", "true");
+}
+
+document.addEventListener("click", (event) => {
+  const title = event.target.closest("#work .qualification-title");
+  if (title) {
+    const card = title.closest(".qualification-card");
+    if (card) {
+      openQualificationModal(card);
+    }
+    return;
+  }
+
+  if (qualificationModalClose && event.target === qualificationModalClose) {
+    closeQualificationModal();
+  }
+
+  if (qualificationModal && event.target === qualificationModal) {
+    closeQualificationModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && qualificationModal?.classList.contains("active-modal")) {
+    closeQualificationModal();
+  }
 });
 
 /* PORTFOLIO SWIPER  */

@@ -370,6 +370,13 @@ img {
         margin-bottom: var(--mb-2);
         cursor: pointer;
 
+        > div {
+            min-height: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .skills-title {
             font-size: var(--h3-font-size);
         }
@@ -445,51 +452,6 @@ img {
         display: block;
         background-color: var(--first-color);
     }
-
-    .skills-html {
-        width: 90%;
-    }
-
-    .skills-css {
-        width: 80%;
-    }
-
-    .skills-js {
-        width: 60%;
-    }
-
-    .skills-react {
-        width: 85%;
-    }
-
-    .skills-php {
-        width: 80%;
-    }
-
-    .skills-node {
-        width: 70%;
-    }
-
-    .skills-firebase {
-        width: 90%;
-    }
-
-    .skills-python {
-        width: 55%;
-    }
-
-    .skills-figma {
-        width: 90%;
-    }
-
-    .skills-sketch {
-        width: 85%;
-    }
-
-    .skills-ps {
-        width: 85%;
-    }
-
 }
 
 /* QUALIFICATION */
@@ -528,15 +490,46 @@ img {
 
 .qualification-data {
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
+    grid-template-columns: minmax(0, 1.2fr) max-content minmax(0, 1.2fr);
+    column-gap: 1.75rem;
     
     &-alt {
         text-align: center;
     }
 
+    .qualification-card {
+        position: relative;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
     .qualification-title {
         font-size: var(--normal-font-size);
         font-weight: var(--font-medium);
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-right: 1.25rem;
+        margin-bottom: .2rem;
+        cursor: pointer;
+
+        &::after {
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: .75rem;
+            color: var(--text-color-light);
+            position: absolute;
+            top: .2rem;
+            right: .1rem;
+            transition: .2s;
+        }
+
+        &:hover::after {
+            color: var(--first-color);
+            transform: translateX(2px);
+        }
     }
 
     .qualification-subtitle {
@@ -567,6 +560,93 @@ img {
     }
 }
 
+.qualification-container {
+    max-width: 900px;
+}
+
+#work.qualification-content {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.qualification-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    padding: 1rem;
+    transition: .3s;
+
+    &.active-modal {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-content {
+        position: relative;
+        background-color: var(--container-color);
+        border-radius: 1rem;
+        padding: 1.75rem;
+        width: min(100%, 680px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+    }
+
+    &-title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-0-25);
+    }
+
+    &-subtitle,
+    &-location,
+    &-calendar {
+        display: block;
+        font-size: var(--small-font-size);
+    }
+
+    &-subtitle {
+        font-weight: var(--font-medium);
+    }
+
+    &-location,
+    &-calendar {
+        color: var(--text-color-light);
+        margin-top: .2rem;
+    }
+
+    &-description {
+        margin-top: var(--mb-1-5);
+    }
+
+    &-list {
+        margin: 0;
+        padding-left: 1.2rem;
+        list-style: disc;
+
+        li {
+            margin-bottom: .65rem;
+            line-height: 1.65;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: var(--first-color);
+        cursor: pointer;
+    }
+}
+
 /* SERVICES */
 .services-container {
     display: grid;
@@ -575,11 +655,17 @@ img {
 
     .services-content {
         position: relative;
+        display: flex;
+        flex-direction: column;
         background-color: var(--container-color);
         padding: 3.5rem .5rem 1.25rem 1.5rem;
         border-radius: .25rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
         transition: 0.3s;
+
+        > div:first-child {
+            min-height: 7.5rem;
+        }
 
         &:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
@@ -601,6 +687,8 @@ img {
         .services-button {
             cursor: pointer;
             font-size: var(--small-font-size);
+            margin-top: auto;
+            align-self: flex-start;
 
             &:hover .button-icon {
                 transform: translateX(.45rem);
