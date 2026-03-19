@@ -267,6 +267,67 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+/* CONTACT FORM */
+const contactForm = document.getElementById("contact-form");
+const contactToast = document.getElementById("contact-toast");
+let contactToastTimeout;
+
+function showContactToast(message, isError = false) {
+  if (!contactToast) {
+    return;
+  }
+
+  clearTimeout(contactToastTimeout);
+  contactToast.textContent = message;
+  contactToast.classList.toggle("error", isError);
+  contactToast.classList.add("show");
+
+  contactToastTimeout = setTimeout(() => {
+    contactToast.classList.remove("show", "error");
+  }, 3200);
+}
+
+contactForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const langData = window.currentLangData || {};
+  const formData = new FormData(contactForm);
+
+  if (submitButton) {
+    submitButton.disabled = true;
+  }
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed");
+    }
+
+    contactForm.reset();
+    showContactToast(
+      langData.contact_success_message || "Thanks for your message. I will get back to you soon."
+    );
+  } catch (error) {
+    showContactToast(
+      langData.contact_error_message ||
+        "Sending did not work right now. Please try again or contact me directly by email.",
+      true
+    );
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
+  }
+});
+
 /* PORTFOLIO SWIPER  */
 var swiperPortfolio = new Swiper(".portfolio-container", {
   cssMode: true,

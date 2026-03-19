@@ -1128,8 +1128,8 @@
                     </div>
                 </div>
 
-                <form method="POST" action="https://formsubmit.co/el/royabe"
-                    class="contact-form grid">
+                <form method="POST" action="https://formsubmit.co/info@minh-vuong.de"
+                    class="contact-form grid" id="contact-form">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
                             <label for="fullname" class="contact-label" data-i18n="contact_label_name">Name</label>
@@ -1152,14 +1152,16 @@
                         </div>
                     </div>
                     <!-- Hidden inputs and submit button -->
-                    <input type="hidden" name="_next" value="https://minh-vuong.de/thanks.html">
-                    <input type="hidden" name="_autoresponse" value="your custom message">
+                    <input type="hidden" name="_subject" value="Neue Nachricht von minh-vuong.de">
+                    <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse" value="Danke für deine Nachricht. Ich melde mich bald zurück.">
                     <div class="contact-button">
                         <button type="submit" class="button button-flex">
                             <i class="fab fa-telegram-plane button-icon"></i><span data-i18n="contact_button_send">Send Message</span></button>
                     </div>
                 </form>
+                <div class="contact-toast" id="contact-toast" aria-live="polite"></div>
             </div>
         </section>
     </main>

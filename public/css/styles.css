@@ -874,6 +874,35 @@ img {
   cursor: pointer;
 }
 
+.contact-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%) translateY(1rem);
+  background-color: var(--container-color);
+  color: var(--title-color);
+  border: 1px solid rgba(79, 130, 246, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  border-radius: .9rem;
+  padding: .9rem 1.1rem;
+  max-width: min(90vw, 460px);
+  text-align: center;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s;
+}
+
+.contact-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.contact-toast.error {
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
 /* ------------------------------------- SERVICES -------------------------------------------------*/
 .services-container {
   display: grid;

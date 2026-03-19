@@ -132,6 +132,8 @@
     "contact_label_subject": "Betreff",
     "contact_label_message": "Nachricht",
     "contact_button_send": "Nachricht Senden",
+    "contact_success_message": "Danke für deine Nachricht. Ich melde mich bald bei dir.",
+    "contact_error_message": "Das Senden hat gerade nicht funktioniert. Bitte versuche es erneut oder schreibe mir direkt per E-Mail.",
 
     "footer_subtitle": "Softwareentwickler",
     "footer_link_services": "Services",
