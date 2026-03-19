@@ -1128,7 +1128,7 @@
                     </div>
                 </div>
 
-                <form method="POST" data-endpoint="https://formsubmit.co/info@minh-vuong.de"
+                <form method="POST" data-endpoint="https://formsubmit.co/info@minh-vuong.de" onsubmit="return false;"
                     class="contact-form grid" id="contact-form">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
@@ -1155,9 +1155,10 @@
                     <input type="hidden" name="_subject" value="Neue Nachricht von minh-vuong.de">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://minh-vuong.de/#contact">
                     <input type="hidden" name="_autoresponse" value="Danke für deine Nachricht. Ich melde mich bald zurück.">
                     <div class="contact-button">
-                        <button type="submit" class="button button-flex">
+                        <button type="button" class="button button-flex" id="contact-submit">
                             <i class="fab fa-telegram-plane button-icon"></i><span data-i18n="contact_button_send">Send Message</span></button>
                     </div>
                 </form>

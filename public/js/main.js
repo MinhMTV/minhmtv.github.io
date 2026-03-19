@@ -269,6 +269,7 @@ document.addEventListener("keydown", (event) => {
 
 /* CONTACT FORM */
 const contactForm = document.getElementById("contact-form");
+const contactSubmitButton = document.getElementById("contact-submit");
 const contactToast = document.getElementById("contact-toast");
 let contactToastTimeout;
 
@@ -287,10 +288,12 @@ function showContactToast(message, isError = false) {
   }, 3200);
 }
 
-contactForm?.addEventListener("submit", async (event) => {
-  event.preventDefault();
+async function submitContactForm(event) {
+  if (event) {
+    event.preventDefault();
+  }
 
-  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const submitButton = contactSubmitButton || contactForm?.querySelector('button');
   const langData = window.currentLangData || {};
   const formData = new FormData(contactForm);
   const endpoint = contactForm.dataset.endpoint;
@@ -336,7 +339,10 @@ contactForm?.addEventListener("submit", async (event) => {
       submitButton.disabled = false;
     }
   }
-});
+}
+
+contactForm?.addEventListener("submit", submitContactForm);
+contactSubmitButton?.addEventListener("click", submitContactForm);
 
 /* PORTFOLIO SWIPER  */
 var swiperPortfolio = new Swiper(".portfolio-container", {
