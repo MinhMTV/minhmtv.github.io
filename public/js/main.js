@@ -113,7 +113,8 @@ document.querySelector('.en').addEventListener('click', () => setLanguagePrefere
 // Load the preferred language on page load
 document.addEventListener('DOMContentLoaded', async () => {
   const preferredLang = localStorage.getItem('language') || 'de'; // default to German
-  setLanguagePreference(preferredLang);
+  await setLanguagePreference(preferredLang);
+  handleContactRedirectState();
 });
 
 
@@ -288,61 +289,29 @@ function showContactToast(message, isError = false) {
   }, 3200);
 }
 
-async function submitContactForm(event) {
-  if (event) {
-    event.preventDefault();
+contactForm?.addEventListener("submit", () => {
+  if (contactSubmitButton) {
+    contactSubmitButton.disabled = true;
   }
+});
 
-  const submitButton = contactSubmitButton || contactForm?.querySelector('button');
+function handleContactRedirectState() {
   const langData = window.currentLangData || {};
-  const formData = new FormData(contactForm);
-  const endpoint = contactForm.dataset.endpoint;
+  const currentUrl = new URL(window.location.href);
 
-  if (!endpoint) {
-    showContactToast(
-      langData.contact_error_message ||
-        "Sending did not work right now. Please try again or contact me directly by email.",
-      true
-    );
+  if (currentUrl.searchParams.get("sent") !== "1") {
     return;
   }
 
-  if (submitButton) {
-    submitButton.disabled = true;
-  }
+  showContactToast(
+    langData.contact_success_message || "Thanks for your message. I will get back to you soon."
+  );
 
-  try {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Form submission failed");
-    }
-
-    contactForm.reset();
-    showContactToast(
-      langData.contact_success_message || "Thanks for your message. I will get back to you soon."
-    );
-  } catch (error) {
-    showContactToast(
-      langData.contact_error_message ||
-        "Sending did not work right now. Please try again or contact me directly by email.",
-      true
-    );
-  } finally {
-    if (submitButton) {
-      submitButton.disabled = false;
-    }
-  }
+  currentUrl.searchParams.delete("sent");
+  const cleanedUrl =
+    `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash || "#contact"}`;
+  window.history.replaceState({}, "", cleanedUrl);
 }
-
-contactForm?.addEventListener("submit", submitContactForm);
-contactSubmitButton?.addEventListener("click", submitContactForm);
 
 /* PORTFOLIO SWIPER  */
 var swiperPortfolio = new Swiper(".portfolio-container", {
@@ -451,7 +420,3 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-// Load the preferred language on page load
-document.addEventListener('DOMContentLoaded', async () => {
-  setInitialLanguage(); // Call the new function to set initial language
-});
