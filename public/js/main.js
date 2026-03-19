@@ -293,13 +293,23 @@ contactForm?.addEventListener("submit", async (event) => {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const langData = window.currentLangData || {};
   const formData = new FormData(contactForm);
+  const endpoint = contactForm.dataset.endpoint;
+
+  if (!endpoint) {
+    showContactToast(
+      langData.contact_error_message ||
+        "Sending did not work right now. Please try again or contact me directly by email.",
+      true
+    );
+    return;
+  }
 
   if (submitButton) {
     submitButton.disabled = true;
   }
 
   try {
-    const response = await fetch(contactForm.action, {
+    const response = await fetch(endpoint, {
       method: "POST",
       body: formData,
       headers: {
