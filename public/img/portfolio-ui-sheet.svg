@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="800" viewBox="0 0 1800 800" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f5f7fb"/></linearGradient>
+    <linearGradient id="ultrasound" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#16212d"/><stop offset=".52" stop-color="#aeb9c2"/><stop offset="1" stop-color="#303d49"/></linearGradient>
+    <style>
+      .ui { font: 600 13px Arial, sans-serif; fill: #223047 }
+      .sub { font: 11px Arial, sans-serif; fill: #6d7a8e }
+      .tiny { font: 10px Arial, sans-serif; fill: #738096 }
+      .bold { font: 700 17px Arial, sans-serif; fill: #202d42 }
+      .white { fill: #fff }
+      .blue { fill: #4c70c7 }
+      .line { stroke: #e2e7ef; stroke-width: 1 }
+    </style>
+  </defs>
+
+  <!-- OCR document review -->
+  <g transform="translate(0 0)">
+    <rect width="600" height="400" fill="#edf1f7"/>
+    <rect width="600" height="38" fill="#fff"/><circle cx="21" cy="19" r="8" fill="#4c70c7"/><path d="M18 19h6M21 16v6" stroke="#fff" stroke-width="1.5"/>
+    <text x="38" y="23" class="ui">Paperflow</text><rect x="432" y="10" width="102" height="19" rx="9" fill="#edf3ff"/><text x="446" y="23" class="tiny" fill="#4567b8">Review queue</text><circle cx="562" cy="19" r="10" fill="#e9edf4"/><text x="558" y="23" class="tiny">M</text>
+    <rect y="38" width="600" height="362" fill="#f4f6fa"/><rect x="0" y="38" width="64" height="362" fill="#202d42"/>
+    <rect x="22" y="65" width="20" height="20" rx="5" fill="#4c70c7"/><path d="M28 70h8v10h-8z" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="32" cy="119" r="8" fill="#718096"/><rect x="24" y="158" width="16" height="16" rx="4" fill="#718096"/><path d="M25 215h14M25 222h14" stroke="#718096" stroke-width="2"/>
+    <text x="88" y="69" class="sub">INBOX / DOCUMENT REVIEW</text><text x="88" y="96" class="bold">Invoice · 2026-0418</text><rect x="472" y="55" width="93" height="26" rx="5" fill="#4c70c7"/><text x="489" y="72" class="tiny white">Approve record</text>
+    <rect x="88" y="112" width="230" height="250" rx="5" fill="#dfe4eb"/><rect x="104" y="127" width="198" height="221" rx="2" fill="#fff"/>
+    <text x="121" y="153" class="tiny">INVOICE</text><path d="M121 164h112M121 171h90" class="line"/><rect x="121" y="190" width="166" height="44" rx="2" fill="#f8f9fb"/><path d="M130 202h72M130 211h138M130 220h105M121 249h160M121 258h160M121 267h114" class="line"/><path d="M121 296h70M121 305h52" class="line"/><text x="236" y="325" class="tiny">€ 2,480.00</text>
+    <rect x="334" y="112" width="231" height="250" rx="5" fill="#fff"/><text x="351" y="138" class="ui">Extracted fields</text><text x="351" y="166" class="tiny">SUPPLIER</text><rect x="351" y="173" width="195" height="27" rx="3" fill="#f7f9fc"/><text x="360" y="191" class="sub">Nordlicht Handel GmbH</text><text x="351" y="222" class="tiny">INVOICE NUMBER</text><rect x="351" y="229" width="195" height="27" rx="3" fill="#f7f9fc"/><text x="360" y="247" class="sub">2026-0418</text><text x="351" y="278" class="tiny">TOTAL AMOUNT</text><rect x="351" y="285" width="195" height="27" rx="3" fill="#f7f9fc"/><text x="360" y="303" class="sub">€ 2,480.00</text><circle cx="357" cy="335" r="5" fill="#45a47d"/><text x="368" y="339" class="tiny">OCR match verified</text>
+  </g>
+
+  <!-- Mobile workflow -->
+  <g transform="translate(600 0)">
+    <rect width="600" height="400" fill="#e9edf4"/><circle cx="60" cy="83" r="124" fill="#dfe6f2"/><circle cx="548" cy="360" r="168" fill="#d9e2f0"/>
+    <rect x="82" y="35" width="433" height="330" rx="15" fill="#fff" opacity=".62"/><rect x="220" y="18" width="164" height="364" rx="25" fill="#1c2739"/><rect x="227" y="28" width="150" height="344" rx="18" fill="#f8f9fc"/><rect x="279" y="33" width="46" height="9" rx="4" fill="#1c2739"/>
+    <text x="241" y="68" class="tiny">9:41</text><circle cx="356" cy="63" r="3" fill="#26364c"/><path d="M365 62h8M365 66h8" stroke="#26364c" stroke-width="1.4"/>
+    <path d="M242 94h14" stroke="#4c70c7" stroke-width="2"/><text x="242" y="120" class="bold">My appointments</text><text x="242" y="140" class="tiny">Your schedule at a glance</text>
+    <rect x="241" y="157" width="122" height="70" rx="8" fill="#eaf0fd"/><text x="252" y="178" class="tiny" fill="#4c70c7">TODAY · 10:30</text><text x="252" y="198" class="ui">Consultation</text><text x="252" y="215" class="tiny">Room 02 · Confirmed</text>
+    <text x="242" y="251" class="ui">Upcoming</text><rect x="241" y="261" width="122" height="43" rx="6" fill="#fff" stroke="#e2e7ef"/><circle cx="258" cy="282" r="9" fill="#edf1f8"/><text x="276" y="280" class="tiny">Thu, 14:00</text><text x="276" y="294" class="tiny">Follow-up</text>
+    <rect x="240" y="320" width="124" height="31" rx="8" fill="#4c70c7"/><text x="272" y="340" class="tiny white">View details</text>
+    <rect x="104" y="111" width="94" height="57" rx="8" fill="#fff"/><circle cx="120" cy="130" r="7" fill="#54a786"/><text x="134" y="133" class="tiny">Synced</text><text x="118" y="153" class="tiny">Secure sign-in</text>
+    <rect x="407" y="235" width="112" height="60" rx="8" fill="#fff"/><path d="M423 254h78M423 261h54" class="line"/><text x="423" y="282" class="tiny">Offline-ready</text>
+  </g>
+
+  <!-- Medical imaging QA -->
+  <g transform="translate(1200 0)">
+    <rect width="600" height="400" fill="#202630"/><rect width="600" height="38" fill="#171d26"/><circle cx="21" cy="19" r="7" fill="#4c70c7"/><text x="39" y="23" class="ui white">SonoLab · QA review</text><text x="472" y="23" class="tiny" fill="#bac4d2">TEST RUN 04-18</text>
+    <rect x="0" y="38" width="65" height="362" fill="#171d26"/><rect x="22" y="65" width="20" height="20" rx="4" fill="#364967"/><path d="M27 71h10M27 76h10" stroke="#b9c6d8" stroke-width="1.5"/><circle cx="32" cy="121" r="8" fill="#59677a"/><circle cx="32" cy="165" r="8" fill="#59677a"/><path d="M25 214h14M25 221h14" stroke="#59677a" stroke-width="2"/>
+    <text x="88" y="67" class="tiny" fill="#9eacbe">PATIENT SIMULATION / CASE 18</text><text x="88" y="91" class="ui white">Abdominal scan workflow</text>
+    <rect x="88" y="108" width="284" height="196" rx="4" fill="#111923"/><rect x="98" y="118" width="264" height="176" fill="url(#ultrasound)"/><path d="M226 126c-40 16-64 59-74 119 38 18 80 18 117 0-11-62-22-101-43-119z" fill="#dce2e4" opacity=".47"/><path d="M204 145c-20 27-31 52-37 91M229 142c23 30 34 58 38 97M193 188h75M184 213h94" stroke="#eff3f4" stroke-opacity=".55" stroke-width="2"/><path d="M106 130h14M106 130v14M354 130h-14M354 130v14M106 282h14M106 282v-14M354 282h-14M354 282v-14" stroke="#b7d2ff" stroke-width="2"/>
+    <text x="88" y="329" class="tiny" fill="#aeb9c8">Frame 024 / 060</text><rect x="88" y="340" width="284" height="4" rx="2" fill="#4a5564"/><rect x="88" y="340" width="167" height="4" rx="2" fill="#6d91de"/>
+    <rect x="389" y="108" width="176" height="246" rx="5" fill="#2a323e"/><text x="406" y="134" class="ui white">Automated checks</text><circle cx="410" cy="159" r="5" fill="#57b58d"/><text x="423" y="163" class="tiny" fill="#d5dce6">Image loaded</text><circle cx="410" cy="187" r="5" fill="#57b58d"/><text x="423" y="191" class="tiny" fill="#d5dce6">Controls responsive</text><circle cx="410" cy="215" r="5" fill="#57b58d"/><text x="423" y="219" class="tiny" fill="#d5dce6">Measurements saved</text><path d="M406 240h142" stroke="#424d5c"/><text x="406" y="265" class="tiny" fill="#aeb9c8">Regression suite</text><text x="406" y="288" class="ui white">24 / 24 passed</text><rect x="406" y="311" width="120" height="24" rx="4" fill="#364967"/><text x="421" y="327" class="tiny" fill="#d9e5fa">Open test report</text>
+  </g>
+
+  <!-- Business dashboard -->
+  <g transform="translate(0 400)">
+    <rect width="600" height="400" fill="#edf1f7"/><rect width="600" height="38" fill="#fff"/><circle cx="21" cy="19" r="8" fill="#4c70c7"/><path d="M17 19h8M21 15v8" stroke="#fff" stroke-width="1.5"/><text x="38" y="23" class="ui">Workspace</text><rect x="465" y="9" width="98" height="20" rx="10" fill="#f1f4f8"/><circle cx="478" cy="19" r="6" fill="#bec9da"/><text x="490" y="23" class="tiny">Team account</text>
+    <rect y="38" width="64" height="362" fill="#202d42"/><rect x="23" y="65" width="18" height="18" rx="4" fill="#4c70c7"/><path d="M27 70h10v8H27z" stroke="#fff"/><circle cx="32" cy="118" r="7" fill="#718096"/><circle cx="32" cy="157" r="7" fill="#718096"/><path d="M24 199h16M24 205h16" stroke="#718096" stroke-width="2"/>
+    <text x="88" y="70" class="sub">OPERATIONS / OVERVIEW</text><text x="88" y="97" class="bold">Requests</text><rect x="470" y="56" width="94" height="26" rx="5" fill="#4c70c7"/><text x="486" y="73" class="tiny white">+ New request</text>
+    <rect x="88" y="112" width="142" height="65" rx="5" fill="#fff"/><text x="102" y="134" class="tiny">OPEN REQUESTS</text><text x="102" y="162" class="bold">18</text><text x="132" y="162" class="tiny" fill="#45a47d">↓ 3 this week</text>
+    <rect x="242" y="112" width="142" height="65" rx="5" fill="#fff"/><text x="256" y="134" class="tiny">IN PROGRESS</text><text x="256" y="162" class="bold">07</text><circle cx="354" cy="153" r="10" fill="#eef2fa"/><path d="M354 146v7l4 3" stroke="#4c70c7" stroke-width="1.5"/>
+    <rect x="396" y="112" width="168" height="65" rx="5" fill="#fff"/><text x="410" y="134" class="tiny">COMPLETED THIS MONTH</text><text x="410" y="162" class="bold">42</text><path d="M495 157l12-10 10 5 15-18" stroke="#4c70c7" stroke-width="2"/>
+    <rect x="88" y="190" width="476" height="173" rx="5" fill="#fff"/><text x="104" y="216" class="ui">Recent requests</text><text x="475" y="216" class="tiny">View all  →</text><path d="M104 230h444" class="line"/><text x="104" y="249" class="tiny">REQUEST</text><text x="305" y="249" class="tiny">OWNER</text><text x="411" y="249" class="tiny">UPDATED</text><text x="501" y="249" class="tiny">STATUS</text>
+    <path d="M104 260h444M104 294h444M104 328h444" class="line"/><text x="104" y="282" class="sub">Access request · Vienna</text><text x="305" y="282" class="sub">L. Berger</text><text x="411" y="282" class="tiny">Today</text><rect x="495" y="267" width="48" height="18" rx="9" fill="#eaf4ef"/><text x="503" y="280" class="tiny" fill="#358462">Open</text><text x="104" y="316" class="sub">Data import · Q2 report</text><text x="305" y="316" class="sub">M. Hofer</text><text x="411" y="316" class="tiny">Yesterday</text><rect x="495" y="301" width="48" height="18" rx="9" fill="#edf2fc"/><text x="500" y="314" class="tiny" fill="#4567b8">Review</text><text x="104" y="350" class="sub">Update supplier record</text><text x="305" y="350" class="sub">T. Nguyen</text><text x="411" y="350" class="tiny">Mon, 09:42</text><rect x="495" y="335" width="48" height="18" rx="9" fill="#f0f2f5"/><text x="501" y="348" class="tiny">Done</text>
+  </g>
+
+  <!-- Data automation -->
+  <g transform="translate(600 400)">
+    <rect width="600" height="400" fill="#edf1f7"/><rect width="600" height="38" fill="#fff"/><circle cx="21" cy="19" r="8" fill="#4c70c7"/><path d="M17 19h8M21 15v8" stroke="#fff" stroke-width="1.5"/><text x="38" y="23" class="ui">Data checks</text><text x="475" y="23" class="tiny">Environment: Test</text>
+    <rect y="38" width="64" height="362" fill="#202d42"/><rect x="22" y="65" width="20" height="20" rx="5" fill="#4c70c7"/><path d="M27 72h10M27 77h6" stroke="#fff" stroke-width="1.4"/><circle cx="32" cy="119" r="7" fill="#718096"/><rect x="25" y="154" width="14" height="14" rx="3" fill="#718096"/><path d="M25 200h14M25 207h14" stroke="#718096" stroke-width="2"/>
+    <text x="88" y="69" class="sub">AUTOMATIONS / DAILY VALIDATION</text><text x="88" y="96" class="bold">Data quality pipeline</text><rect x="473" y="55" width="90" height="25" rx="5" fill="#4c70c7"/><path d="M488 63v9l7-4.5z" fill="#fff"/><text x="502" y="72" class="tiny white">Run pipeline</text>
+    <rect x="88" y="112" width="476" height="116" rx="5" fill="#fff"/><text x="104" y="136" class="ui">Validation flow</text><rect x="104" y="153" width="104" height="54" rx="5" fill="#f5f7fb" stroke="#dfe5ed"/><circle cx="119" cy="171" r="5" fill="#4c70c7"/><text x="132" y="175" class="tiny">Load source</text><text x="117" y="194" class="tiny">SQL Server</text><path d="M211 180h22m-5-5 5 5-5 5" stroke="#98a5b8" stroke-width="1.5"/><rect x="239" y="153" width="120" height="54" rx="5" fill="#f5f7fb" stroke="#dfe5ed"/><circle cx="254" cy="171" r="5" fill="#45a47d"/><text x="267" y="175" class="tiny">Check records</text><text x="252" y="194" class="tiny">6 rules · passed</text><path d="M362 180h22m-5-5 5 5-5 5" stroke="#98a5b8" stroke-width="1.5"/><rect x="390" y="153" width="154" height="54" rx="5" fill="#f5f7fb" stroke="#dfe5ed"/><circle cx="405" cy="171" r="5" fill="#45a47d"/><text x="418" y="175" class="tiny">Create report</text><text x="403" y="194" class="tiny">Stored · 08:15</text>
+    <rect x="88" y="242" width="476" height="121" rx="5" fill="#fff"/><text x="104" y="267" class="ui">Run history</text><text x="488" y="267" class="tiny">Last 7 days</text><path d="M104 279h444M104 307h444M104 335h444" class="line"/><circle cx="112" cy="294" r="4" fill="#45a47d"/><text x="124" y="298" class="sub">Daily consistency check</text><text x="369" y="298" class="tiny">Today, 08:15</text><text x="505" y="298" class="tiny">Passed</text><circle cx="112" cy="322" r="4" fill="#45a47d"/><text x="124" y="326" class="sub">Monthly reconciliation</text><text x="369" y="326" class="tiny">Yesterday</text><text x="505" y="326" class="tiny">Passed</text><circle cx="112" cy="350" r="4" fill="#d8a044"/><text x="124" y="354" class="sub">Import validation</text><text x="369" y="354" class="tiny">Mon, 16:40</text><text x="505" y="354" class="tiny">Review</text>
+  </g>
+
+  <!-- Research mobile app -->
+  <g transform="translate(1200 400)">
+    <rect width="600" height="400" fill="#e9edf4"/><path d="M0 0h600v78H0z" fill="#dfe7f2"/><rect x="31" y="83" width="538" height="281" rx="10" fill="#fff" opacity=".7"/>
+    <rect x="100" y="20" width="226" height="358" rx="23" fill="#202d42"/><rect x="108" y="29" width="210" height="340" rx="17" fill="#f9fafc"/><rect x="183" y="34" width="60" height="9" rx="5" fill="#202d42"/><text x="124" y="67" class="tiny">9:41</text><circle cx="296" cy="61" r="3" fill="#26364c"/>
+    <path d="M124 89h16" stroke="#4c70c7" stroke-width="2"/><text x="124" y="117" class="bold">Study check-in</text><text x="124" y="137" class="tiny">Community health survey</text><rect x="124" y="154" width="178" height="61" rx="7" fill="#edf2fc"/><text x="138" y="176" class="tiny" fill="#4c70c7">VISIT 03 OF 05</text><text x="138" y="198" class="ui">Follow-up questions</text><text x="124" y="240" class="ui">How are you feeling today?</text><rect x="124" y="252" width="178" height="28" rx="6" fill="#fff" stroke="#dce2eb"/><circle cx="139" cy="266" r="5" fill="#fff" stroke="#9daabc"/><text x="152" y="270" class="tiny">Very well</text><rect x="124" y="286" width="178" height="28" rx="6" fill="#fff" stroke="#dce2eb"/><circle cx="139" cy="300" r="5" fill="#fff" stroke="#9daabc"/><text x="152" y="304" class="tiny">Somewhat well</text><rect x="124" y="326" width="178" height="27" rx="7" fill="#4c70c7"/><text x="189" y="344" class="tiny white">Continue</text>
+    <rect x="373" y="106" width="150" height="77" rx="8" fill="#fff"/><circle cx="394" cy="130" r="8" fill="#eaf4ef"/><path d="m390 130 3 3 5-6" stroke="#45a47d" stroke-width="1.5"/><text x="410" y="134" class="ui">Saved securely</text><text x="389" y="158" class="tiny">Progress syncs when</text><text x="389" y="173" class="tiny">you are back online.</text>
+    <rect x="373" y="204" width="150" height="102" rx="8" fill="#fff"/><text x="389" y="229" class="tiny">RESEARCH VISIT</text><text x="389" y="253" class="ui">Vienna cohort</text><path d="M389 267h115" class="line"/><text x="389" y="290" class="tiny">API connected · Ready</text>
+  </g>
+</svg>

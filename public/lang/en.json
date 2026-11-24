@@ -161,7 +161,7 @@
     "language_chinese": "Chinese",
     "language_french": "French",
     "portfolio_title": "Selected Projects",
-    "portfolio_subtitle": "Anonymized work examples · imagery is illustrative",
+    "portfolio_subtitle": "Illustrative project views · not original project screenshots",
     "portfolio_ocr_title": "Document processing with OCR",
     "portfolio_ocr_description": "Built a scanning workflow to capture and validate document data with OCR and QR recognition, integrated through REST APIs.",
     "portfolio_mobile_title": "Cross-platform mobile apps",

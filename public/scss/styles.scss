@@ -807,19 +807,24 @@ img {
 
 /* PORTFOLIO */
 .portfolio-container {
+    width: calc(100% - 2 * clamp(1.5rem, 5vw, 4rem));
+    max-width: 1440px;
+    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.75rem 1.5rem;
+    align-items: start;
+    gap: 3.25rem clamp(1.5rem, 3vw, 3rem);
 }
 
 .portfolio-content { min-width: 0; }
+.portfolio-data { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; }
 
 .portfolio-art {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1.5;
     margin-bottom: 1rem;
-    border-radius: .5rem;
-    background-image: url('../img/portfolio-contact-sheet.png');
+    border-radius: .7rem;
+    background-image: url('../img/portfolio-ui-sheet.svg');
     background-repeat: no-repeat;
     background-size: 300% 200%;
     background-color: var(--input-color);
@@ -833,20 +838,21 @@ img {
 .portfolio-art-4 { background-position: 0 100%; }
 .portfolio-art-5 { background-position: 50% 100%; }
 .portfolio-art-6 { background-position: 100% 100%; }
-.portfolio-title { font-size: var(--h3-font-size); margin: 0 0 var(--mb-0-5); }
-.portfolio-description { max-width: 42ch; margin: 0 0 var(--mb-0-75); line-height: 1.65; }
+.portfolio-title { font-size: var(--h3-font-size); line-height: 1.28; overflow-wrap: anywhere; hyphens: auto; margin: 0 0 .75rem; }
+.portfolio-description { max-width: 58ch; margin: 0 0 1rem; line-height: 1.75; overflow-wrap: break-word; hyphens: auto; }
 .portfolio-tags { color: var(--text-color-highlight); font-size: var(--small-font-size); font-weight: var(--font-medium); }
 .about-container .about-buttons { justify-content: flex-start; }
 .about-buttons #cv-download { width: fit-content; max-width: 100%; padding: .8rem 1.15rem; gap: .7rem; white-space: nowrap; }
 .about-buttons #cv-download .button-icon { margin: 0; }
 .contact-honeypot, .contact-honeypot[hidden] { display: none !important; }
 
-@media screen and (max-width: 767px) {
-    .portfolio-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+@media screen and (max-width: 1024px) {
+    .portfolio-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem clamp(1.25rem, 4vw, 2.5rem); }
 }
 
-@media screen and (max-width: 480px) {
-    .portfolio-container { grid-template-columns: 1fr; gap: 2rem; }
+@media screen and (max-width: 600px) {
+    .portfolio-container { grid-template-columns: 1fr; gap: 2.5rem; width: calc(100% - 3rem); }
+    .portfolio-art { aspect-ratio: 1.5; }
 }
 
 /* PROJECT IN MIND */
