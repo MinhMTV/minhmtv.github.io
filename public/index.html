@@ -163,18 +163,19 @@
                 </div>
 
                 <div class="about-container-data">
-                    <p class="about-container-data-description" data-i18n="about_description">
-                        I build scalable business applications and data-driven solutions with .NET and Python, from
-                        requirements engineering to deployment. Outside of work, I enjoy music, traveling,
-                        photography, and discovering new cultures and experiences.
-                    </p>
-                    <p class="about-container-data-description" data-i18n="about_interests_experience"></p>
+                    <p class="about-container-data-description" data-i18n="about_description"></p>
+                    <p class="about-container-data-description about-container-data-description-secondary" data-i18n="about_interests_experience"></p>
 
-                    <div class="about-container-data-info">
-                        <div><span class="about-container-data-info-title" data-i18n="language_german">German</span><span class="about-container-data-name" data-i18n="about_language_german">Native</span></div>
-                        <div><span class="about-container-data-info-title" data-i18n="language_english">English</span><span class="about-container-data-name" data-i18n="about_language_english">C1 · Cambridge</span></div>
-                        <div><span class="about-container-data-info-title" data-i18n="language_other">Other languages</span><span class="about-container-data-name" data-i18n="about_language_other">Vietnamese · Chinese HSK 3 · French</span></div>
-                    </div>
+                    <section class="about-languages" aria-labelledby="about-languages-title">
+                        <h3 class="about-languages-title" id="about-languages-title" data-i18n="about_languages_title">Languages</h3>
+                        <dl class="about-languages-list">
+                            <div><dt data-i18n="language_german">German</dt><dd data-i18n="about_language_german">Native</dd></div>
+                            <div><dt data-i18n="language_english">English</dt><dd data-i18n="about_language_english">C1 · Cambridge</dd></div>
+                            <div><dt data-i18n="language_vietnamese">Vietnamese</dt><dd data-i18n="about_language_vietnamese">B1</dd></div>
+                            <div><dt data-i18n="language_chinese">Chinese</dt><dd data-i18n="about_language_chinese">HSK 3</dd></div>
+                            <div><dt data-i18n="language_french">French</dt><dd data-i18n="about_language_french">A1</dd></div>
+                        </dl>
+                    </section>
                     <div class="about-buttons">
                         <a download href="pdf/Minh-Tuan-Vuong_CV_DE.pdf" class="button button-flex">
                             <span data-i18n="about_download_cv_de">Lebenslauf auf Deutsch herunterladen</span>
@@ -937,27 +938,28 @@
                     <div class="contact-inputs grid">
                         <div class="contact-content">
                             <label for="fullname" class="contact-label" data-i18n="contact_label_name">Name</label>
-                            <input id="fullname" name="Fullname" type="text" autocomplete="name" class="contact-input">
+                            <input id="fullname" name="Fullname" type="text" autocomplete="name" class="contact-input" required maxlength="120">
                         </div>
                         <div class="contact-content">
                             <label for="email" class="contact-label" data-i18n="contact_label_email">Email</label>
-                            <input id="email" name="email" type="email" autocomplete="email" class="contact-input">
+                            <input id="email" name="email" type="email" autocomplete="email" class="contact-input" required maxlength="254">
                         </div>
                     </div>
                     <div class="grid">
                         <div class="contact-content">
                             <label for="subject" class="contact-label" data-i18n="contact_label_subject">Subject</label>
-                            <input id="subject" name="Subject" type="text" class="contact-input">
+                            <input id="subject" name="Subject" type="text" class="contact-input" required maxlength="160">
                         </div>
                         <div class="contact-content">
                             <label for="message" class="contact-label" data-i18n="contact_label_message">Message</label>
-                            <textarea id="message" name="Message" style="resize: none;" rows="5"
-                                class="contact-input"></textarea>
+                            <textarea id="message" name="Message" style="resize: vertical;" rows="5" maxlength="5000"
+                                class="contact-input" required></textarea>
                         </div>
                     </div>
-                    <!-- Hidden inputs and submit button -->
+                    <!-- Honeypot: hidden for people, filled by basic bots. -->
+                    <input type="text" name="_honey" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <!-- FormSubmit reCAPTCHA remains enabled by default. -->
                     <input type="hidden" name="_subject" value="Neue Nachricht von minh-vuong.de">
-                    <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://minh-vuong.de/?sent=1#contact">
                     <input type="hidden" name="_autoresponse" value="Danke für deine Nachricht. Ich melde mich bald zurück.">

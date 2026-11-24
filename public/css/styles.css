@@ -541,35 +541,54 @@ img {
 }
 
 .about-container-data-description {
-  text-align: center;
-  margin-bottom: var(--mb-2-5);
-  margin-top: var(--mb-2);
-}
-
-.about-container-data-info {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: var(--mb-2-5);
-}
-
-.about-container-data-info div {
+  max-width: 62ch;
+  margin: 0 auto var(--mb-1-5);
+  line-height: 1.65;
   text-align: center;
 }
 
-.about-container-data-info-title {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-semi-bold);
+.about-container-data-description-secondary {
+  margin-bottom: var(--mb-2);
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+.about-languages {
+  width: min(100%, 30rem);
+  margin: 0 auto var(--mb-2-5);
+}
+
+.about-languages-title {
+  margin-bottom: var(--mb-0-75);
+  font-size: var(--h3-font-size);
+}
+
+.about-languages-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.about-languages-list > div {
+  display: grid;
+  grid-template-columns: minmax(7rem, .8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--first-color-lighter);
+}
+
+.about-languages-list > div:last-child {
+  border-bottom: 0;
+}
+
+.about-languages-list dt {
+  color: var(--text-color-light);
+}
+
+.about-languages-list dd {
   color: var(--title-color);
-}
-
-.about-container-data-info-name {
-  font-size: var(--smaller-font-size);
-}
-
-.about-container-data-info-title,
-.about-container-data-info-name {
-  display: block;
-  text-align: center;
+  font-weight: var(--font-medium);
+  text-align: right;
 }
 
 .about-container .about-buttons {
@@ -859,12 +878,12 @@ img {
 }
 
 .qualification-modal-list li {
-  margin-bottom: .65rem;
+  padding-left: .25rem;
   line-height: 1.65;
 }
 
-.qualification-modal-list li:last-child {
-  margin-bottom: 0;
+.qualification-modal-list li + li {
+  margin-top: .65rem;
 }
 
 .qualification-modal-close {
@@ -1672,3 +1691,7 @@ a:hover {
 
 
 /*# sourceMappingURL=styles.css.map */
+
+.contact-honeypot {
+  display: none !important;
+}
