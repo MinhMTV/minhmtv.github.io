@@ -39,6 +39,12 @@ function updateContent(langData) {
       element.textContent = langData[key];
   });
   updateTypedStrings(langData['typedStrings']);
+  const cvDownload = document.getElementById('cv-download');
+  if (cvDownload) {
+    cvDownload.href = document.documentElement.lang === 'en'
+      ? 'pdf/Minh-Tuan-Vuong_CV_EN.pdf'
+      : 'pdf/Minh-Tuan-Vuong_CV_DE.pdf';
+  }
 }
 
 function syncSkillBars() {
@@ -314,19 +320,7 @@ function handleContactRedirectState() {
   window.history.replaceState({}, "", cleanedUrl);
 }
 
-/* PORTFOLIO SWIPER  */
-var swiperPortfolio = new Swiper(".portfolio-container", {
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+
 
 /* SCROLL SECTIONS ACTIVE LINK */
 const sections = document.querySelectorAll("section[id]");

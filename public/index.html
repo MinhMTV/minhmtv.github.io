@@ -62,8 +62,8 @@
                     <li class="nav-item">
                         <a href="#services" class="nav-link"><i class="fas fa-briefcase nav-link-icon"></i><span  data-i18n="nav_services">Services</span></a>
                     </li>
-                    <li class="nav-item hidden">
-                        <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio"><i class="fas fa-image nav-link-icon"></i><span>Portfolio</span></a>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link"><i class="fas fa-image nav-link-icon"></i><span data-i18n="nav_portfolio">Portfolio</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link" ><i class="fas fa-envelope nav-link-icon"></i><span data-i18n="nav_contact">Contact</span></a>
@@ -177,13 +177,9 @@
                         </dl>
                     </section>
                     <div class="about-buttons">
-                        <a download href="pdf/Minh-Tuan-Vuong_CV_DE.pdf" class="button button-flex">
-                            <span data-i18n="about_download_cv_de">Lebenslauf auf Deutsch herunterladen</span>
-                            <i class="fas fa-download button-icon"></i>
-                        </a>
-                        <a download href="pdf/Minh-Tuan-Vuong_CV_EN.pdf" class="button button-flex">
-                            <span data-i18n="about_download_cv_en">Download CV in English</span>
-                            <i class="fas fa-download button-icon"></i>
+                        <a download id="cv-download" href="pdf/Minh-Tuan-Vuong_CV_DE.pdf" class="button button-flex">
+                            <span data-i18n="about_download_cv">Lebenslauf herunterladen</span>
+                            <i class="fas fa-download button-icon" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -483,12 +479,13 @@
                     <div></div>
                     </div>
                         <div class="qualification-data">
+                            <div></div>
+                            <div><span class="qualification-rounder"></span><span class="qualification-line"></span></div>
                             <div class="qualification-data-alt">
                                 <h3 class="qualification-title" data-i18n="qualification_android_development"></h3>
                                 <span class="qualification-edu-subtitle" data-i18n="qualification_udacity_google"></span>
                                 <div class="qualification-calendar"><i class="fas fa-calendar-alt"></i><span data-i18n="date_android_course"></span></div>
                             </div>
-                            <div><span class="qualification-rounder"></span><span class="qualification-line"></span></div>
                         </div>
                     </div>
 
@@ -829,58 +826,16 @@
 
 
         <!-- PORTFOLIO -->
-        <section class="portfolio section hidden" id="portfolio">
-            <h2 class="section-title">Portfolio</h2>
-            <span class="section-subtitle">Most recent work</span>
-
-            <div class="portfolio-container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- PORTFOLIO 1 -->
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="img/portfolio1.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Modern Website</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Demo <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- PORTFOLIO 2 -->
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="img/portfolio2.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Brand Design</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Demo <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- PORTFOLIO 3 -->
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="img/portfolio3.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Online Store</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Demo <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Arrow -->
-                <div class="swiper-button-next">
-                    <i class="fas fa-angle-right swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="fas fa-angle-left swiper-portfolio-icon"></i>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title" data-i18n="portfolio_title">Selected Work</h2>
+            <span class="section-subtitle" data-i18n="portfolio_subtitle">Anonymized work examples · visuals are illustrative</span>
+            <div class="portfolio-container container">
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-1" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_ocr_title">Document capture &amp; OCR</h3><p class="portfolio-description" data-i18n="portfolio_ocr_description">A concept for turning camera scans into validated, searchable records through OCR and API integrations.</p><span class="portfolio-tags" data-i18n="portfolio_tags_1">OCR · .NET · REST APIs</span></div></article>
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-2" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_mobile_title">Mobile app ecosystems</h3><p class="portfolio-description" data-i18n="portfolio_mobile_description">A mobile product concept connecting clear user flows, backend services, data and app-store-ready delivery.</p><span class="portfolio-tags" data-i18n="portfolio_tags_2">.NET MAUI · Android · iOS</span></div></article>
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-3" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_medical_title">Medical software</h3><p class="portfolio-description" data-i18n="portfolio_medical_description">A healthcare interface concept for presenting imaging workflows with a focus on clarity and dependable software quality.</p><span class="portfolio-tags" data-i18n="portfolio_tags_3">C# · Test automation · Healthcare</span></div></article>
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-4" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_interface_title">Web interfaces &amp; business tools</h3><p class="portfolio-description" data-i18n="portfolio_interface_description">A responsive product concept bringing everyday workflows, useful data and practical interfaces together.</p><span class="portfolio-tags" data-i18n="portfolio_tags_4">ASP.NET Core · Blazor · UI</span></div></article>
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-5" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_data_title">Data &amp; database automation</h3><p class="portfolio-description" data-i18n="portfolio_data_description">A concept for reducing repetitive work with reliable data pipelines, SQL and automated reporting.</p><span class="portfolio-tags" data-i18n="portfolio_tags_5">SQL · Python · Automation</span></div></article>
+                <article class="portfolio-content"><div class="portfolio-art portfolio-art-6" aria-hidden="true"></div><div class="portfolio-data"><h3 class="portfolio-title" data-i18n="portfolio_integration_title">APIs, integrations &amp; delivery</h3><p class="portfolio-description" data-i18n="portfolio_integration_description">A full-stack concept linking services and databases, from implementation and testing through deployment.</p><span class="portfolio-tags" data-i18n="portfolio_tags_6">REST · CI/CD · Cloud</span></div></article>
             </div>
         </section>
 
@@ -957,7 +912,7 @@
                         </div>
                     </div>
                     <!-- Honeypot: hidden for people, filled by basic bots. -->
-                    <input type="text" name="_honey" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="text" name="_honey" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
                     <!-- FormSubmit reCAPTCHA remains enabled by default. -->
                     <input type="hidden" name="_subject" value="Neue Nachricht von minh-vuong.de">
                     <input type="hidden" name="_template" value="table">
