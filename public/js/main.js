@@ -33,6 +33,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 /* CHANGE LANGUAGE */
 function updateContent(langData) {
   window.currentLangData = langData;
+  document.documentElement.lang = localStorage.getItem("language") || "de";
   document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       element.textContent = langData[key];
@@ -324,19 +325,6 @@ var swiperPortfolio = new Swiper(".portfolio-container", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
-});
-
-/* TESTIMONIAL */
-var swiperTestimonial = new Swiper(".testimonial-container", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 50,
-
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
-    },
   },
 });
 
